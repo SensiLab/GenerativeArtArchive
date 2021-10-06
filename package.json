@@ -1,0 +1,31 @@
+{
+  "name": "generative-art-archive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generative Art Archive",
+  "author": "Ri Liu",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "gatsby": "^3.13.1",
+    "gatsby-plugin-catch-links": "^3.14.0",
+    "gatsby-plugin-mdx": "^2.14.0",
+    "gatsby-plugin-sass": "^4.14.0",
+    "gatsby-plugin-sitemap": "^4.10.0",
+    "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-transformer-remark": "^4.11.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass": "^1.41.1"
+  }
+}
