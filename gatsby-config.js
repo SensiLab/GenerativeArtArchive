@@ -9,6 +9,12 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-catch-links",
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-responsive-iframe`],
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "entries",
