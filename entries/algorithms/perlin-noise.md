@@ -19,18 +19,14 @@ In this article we present a step-by-step explanation of the Perlin Noise algori
   - 
 
 Eg codepen:
-<iframe height="500" style="width: 100%;" scrolling="no" title="Meta Bubbles" src="https://codepen.io/megatroncoder/embed/Wzqwdz?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/megatroncoder/pen/Wzqwdz">
-  Meta Bubbles</a> by Shrikanth (<a href="https://codepen.io/megatroncoder">@megatroncoder</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe>
+<iframe height="500" style="width: 100%" scrolling="no" title="Perlin Noise" src="https://codepen.io/camilocruzg/embed/rNzOqMN" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+See the Pen <a href="https://codepen.io/camilocruzg/pen/rNzOqMN">
+  Perlin Noise</a> by Camilo Cruz Gambardella (<a href="https://codepen.io/camilocruzg">@camilocruzg</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
 
 
 eg youtube:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QUqCWkPlLLc?start=102" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe height="500" style="width: 100%" scrolling="no" title="Perlin Noise" src="https://codepen.io/camilocruzg/embed/rNzOqMN" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-See the Pen <a href="https://codepen.io/camilocruzg/pen/rNzOqMN">
-  Perlin Noise</a> by Camilo Cruz Gambardella (<a href="https://codepen.io/camilocruzg">@camilocruzg</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
+
 
