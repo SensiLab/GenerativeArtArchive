@@ -6,7 +6,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-mdx",
     "gatsby-plugin-catch-links",
     {
       resolve: `gatsby-transformer-remark`,
@@ -22,7 +21,24 @@ module.exports = {
       },
       __key: "entries",
     },
-    // {
+    "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              wrapperStyle:
+                'margin-left: 0!important; margin-right: 0!important;',
+              linkImagesToOriginal: false
+            },
+          },
+        ],
+      },
+    },
+  // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {
     //     name: "concepts",
@@ -54,6 +70,5 @@ module.exports = {
     //   },
     //   __key: "artworks",
     // },
-    `gatsby-transformer-remark`,
   ],
 };
