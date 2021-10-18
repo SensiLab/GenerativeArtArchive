@@ -1,9 +1,13 @@
 ---
-title: Random Walk with no self intersection
+title: 2D Random Walk with no self intersection
 type: example
 description:
-creator: Xavier Ho
+creator: Camilo Cruz Gambardella
 rights: Public Domain (CC0)
 ---
 
-content
+# How it works
+A random walk can be described as follows:
+$$
+X_t = X_{t-1} + 
+$$
