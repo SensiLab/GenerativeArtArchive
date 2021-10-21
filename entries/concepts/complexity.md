@@ -6,4 +6,6 @@ creator:
 rights: Public Domain (CC0)
 ---
 
-# Complexity content here
+# Complexity
+
+## Definition

@@ -1,5 +1,5 @@
 ---
-title: Randomness
+title: Noise
 type: concept
 description:
 creator: Camilo Cruz

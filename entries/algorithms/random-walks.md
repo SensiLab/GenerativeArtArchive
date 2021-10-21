@@ -2,7 +2,7 @@
 title: Random Walk
 type: algorithm
 description:
-creator: Camilo Cruz
+creator: Camilo Cruz Gambardella
 rights: Public Domain (CC0)
 ---
 
