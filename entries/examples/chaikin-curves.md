@@ -17,8 +17,8 @@ The Chaikin Curves algorithm is simple: For a ployline of control points {P1, P2
 Eg codepen:
 <iframe height="500" style="width: 900px" scrolling="no" title="Chaikin Curves" src="https://codepen.io/camilocruzg/embed/XWaNaaN" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
 See the Pen <a href="https://codepen.io/camilocruzg/pen/XWaNaaN">
-  Perlin Noise</a> by Camilo Cruz Gambardella (<a href="https://codepen.io/camilocruzg">@camilocruzg</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
+  Chaikin Curves</a> by Camilo Cruz Gambardella (<a href="https://codepen.io/camilocruzg">@camilocruzg</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span></iframe>
 
 ## Variations
 
