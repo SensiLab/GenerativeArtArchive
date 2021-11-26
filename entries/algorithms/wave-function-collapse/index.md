@@ -63,7 +63,7 @@ The following authors provide a good explanation or tutorial for the algorithm i
 Examples in action
 ------------------
 
-<iframe src="http://oskarstalberg.com/game/wave/wave.html" title="WaveFunctionCollapse example by Oskar Starberg" width="100%" height="600"></iframe>
+<iframe src="https://oskarstalberg.com/game/wave/wave.html" title="WaveFunctionCollapse example by Oskar Starberg" width="100%" height="600"></iframe>
 
 ### In the wild
 
