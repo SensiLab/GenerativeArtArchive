@@ -1,5 +1,3 @@
-Generative Systems Home /Artwork / 
-
 ---
 
 title: Vertical-Horizontal #3
