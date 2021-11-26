@@ -10,6 +10,8 @@ creator: Maxim Gumin
 
 rights: Public Domain (CC0)
 
+keywords: map-generation, artist-friendly, sampling, synthesis
+
 ---
 
 Wave Function Collapse
