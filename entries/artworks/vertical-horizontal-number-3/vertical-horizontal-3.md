@@ -1,7 +1,7 @@
 ---
 title: "Vertical-Horizontal #3"
 type: artwork
-description: xxx
+description: xxx
 creator: A. Michael Noll
 rights: Public Domain (CC0)
 ---
