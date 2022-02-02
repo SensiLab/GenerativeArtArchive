@@ -1,0 +1,30 @@
+.homepage header {
+  display: flex;
+  min-height: 50vh;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+  
+.homepage header h1 {
+  font-weight: normal;
+  max-width: 15rem;
+  margin: 0 10rem;
+  line-height: 3rem;
+}
+  
+.homepage header h1 a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+section {
+  padding: 4rem 10rem;
+}
+
+a {
+  color: #F67138;
+}
+
+.featured {
+  background: linear-gradient(95.39deg, #F4EFEF 33.79%, rgba(251, 205, 205, 0) 100%);
+}

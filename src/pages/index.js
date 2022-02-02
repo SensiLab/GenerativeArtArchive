@@ -1,30 +1,31 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 
-import Header from "../layout/header"
-
-// styles
-// const pageStyles = {
-//   color: "#232129",
-//   padding: 96,
-//   fontFamily: "-apple-system, Roboto, sans-serif, serif",
-// }
-// const headingStyles = {
-//   marginTop: 0,
-//   marginBottom: 64,
-//   maxWidth: 320,
-// }
+import "../layout/index.css"
 
 // markup
 const Index = ({ data }) => {
   return (
-    <main>
+    <main className="homepage">
       <title>Home Page</title>
-      <Header/>
+      <header>
+        <h1>Generative Systems Archive</h1>
+      </header>
       <section>
-        <h1>
+        <h1>A home for generative systems.</h1>
+        <p>An online resource where creative practioners, designers, students and researches interested in generative systems and methods can find information about existing generative systems, their cultural and technical contexts.</p>
+      </section>
+      <section className="featured">
+        <h2>Featured article</h2>
+        <h1>Randomness</h1>
+        <p>Randomness is a concept that is well integrated into our common speech, however it escapes unequivocal definitions. The word random is commonly used to describe either things that happen by chance –unexpectedly or with no discernible cause–, or to characterise collections or series of things that don’t seem to have any discernible pattern or order.</p>
+        <a href="/entries/concepts/randomness/">Start reading</a>
+      </section>
+      <section>
+        <h1>Explore generative systems</h1>
+        <h2>
           Concepts
-        </h1>
+        </h2>
         <ul>
             {data.concepts.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
@@ -36,9 +37,9 @@ const Index = ({ data }) => {
         </ul>
       </section>
       <section>
-        <h1>
+        <h2>
           Algorithms
-        </h1>
+        </h2>
         <ul>
             {data.algorithms.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
@@ -50,9 +51,9 @@ const Index = ({ data }) => {
         </ul>
       </section>
       <section>
-        <h1>
+        <h2>
           Examples
-        </h1>
+        </h2>
         <ul>
             {data.examples.nodes.map(entry => (
               <li key={entry.frontmatter.title}>

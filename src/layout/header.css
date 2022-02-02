@@ -1,0 +1,10 @@
+header h1 {
+  font-weight: normal;
+  margin-left: 10rem;
+  line-height: 3rem;
+}
+
+header h1 a {
+  text-decoration: inherit;
+  color: inherit;
+}

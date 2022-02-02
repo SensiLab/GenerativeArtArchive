@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import "./header.css"
+
 const Header = () => (
   <header>
-    <h1 style={{fontWeight: 'normal', textAlign: 'center', maxWidth: '40rem', margin: '2rem auto'}}>
-    <Link to="/">Generative Systems Archive</Link>
+    <h1>
+      <Link to="/">Generative Systems Archive</Link>
     </h1>
   </header>
 )
