@@ -25,62 +25,83 @@ const Index = ({ data }) => {
           <a href="/entries/concepts/randomness/">Start reading</a>
         </div>
       </section>
-      <section>
-        <h1>Explore generative systems</h1>
-        <h2>
-          Concepts
-        </h2>
-        <ul>
-            {data.concepts.nodes.map(entry => (
-              <li key={entry.frontmatter.title}>
-                <Link to={entry.slug}>
-                  {entry.frontmatter.title}
-                </Link>
-              </li>
-            ))}
-        </ul>
-      </section>
-      <section>
+      <section id="entries">
+        <div>
+          <h1>Explore generative systems</h1>
+          <h2>
+            Concepts
+          </h2>
+          <ul>
+              {data.concepts.nodes.map(entry => (
+                <li key={entry.frontmatter.title}>
+                  <Link to={entry.slug}>
+                    <div className="img-placeholder"></div>
+                    <div className="entry-detail">
+                      <h3>
+                        {entry.frontmatter.title}
+                      </h3>
+                    </div>
+                  </Link>
+                </li>
+              ))}
+          </ul>
+      </div>
+      <div>
         <h2>
           Algorithms
         </h2>
         <ul>
             {data.algorithms.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
-                <Link to={entry.slug}>
-                  {entry.frontmatter.title}
-                </Link>
+                  <Link to={entry.slug}>
+                    <div className="img-placeholder"></div>
+                    <div className="entry-detail">
+                      <h3>
+                        {entry.frontmatter.title}
+                      </h3>
+                    </div>
+                  </Link>
               </li>
             ))}
         </ul>
-      </section>
-      <section>
+      </div>
+      <div>
         <h2>
           Examples
         </h2>
         <ul>
             {data.examples.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
-                <Link to={entry.slug}>
-                  {entry.frontmatter.title}
-                </Link>
+                  <Link to={entry.slug}>
+                    <div className="img-placeholder"></div>
+                    <div className="entry-detail">
+                      <h3>
+                        {entry.frontmatter.title}
+                      </h3>
+                    </div>
+                  </Link>
               </li>
             ))}
         </ul>
-      </section>
-      <section>
-        <h1>
+      </div>
+      <div>
+        <h2>
           Artworks
-        </h1>
+        </h2>
         <ul>
             {data.artworks.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
-                <Link to={entry.slug}>
-                  {entry.frontmatter.title}
-                </Link>
+                <h3>
+                  <Link to={entry.slug}>
+                    <h3>
+                      {entry.frontmatter.title}
+                    </h3>
+                  </Link>
+                </h3>
               </li>
             ))}
         </ul>
+      </div>
       </section>
     </main>
   )
