@@ -103,6 +103,17 @@ const Index = ({ data }) => {
         </ul>
       </div>
       </section>
+      <footer>
+        <div class="full-inner">
+          <h1>
+            <Link to="/">Generative Systems Archive</Link>
+          </h1>
+          <ul className="footer-links">
+              <li><a href="https://github.com/SensiLab/GenerativeArtArchive">Contribute</a></li>
+              <li><a href="https://sensilab.monash.edu">Sensilab</a></li>
+          </ul>
+        </div>
+      </footer>
     </main>
   )
 }
