@@ -1,6 +1,8 @@
 import * as React from "react"
 import { graphql, Link } from "gatsby"
 
+import Footer from "../layout/footer"
+import "../layout/footer.css"
 import "../layout/index.css"
 
 // markup
@@ -103,17 +105,7 @@ const Index = ({ data }) => {
         </ul>
       </div>
       </section>
-      <footer>
-        <div class="full-inner">
-          <h1>
-            <Link to="/">Generative Systems Archive</Link>
-          </h1>
-          <ul className="footer-links">
-              <li><a href="https://github.com/SensiLab/GenerativeArtArchive">Contribute</a></li>
-              <li><a href="https://sensilab.monash.edu">Sensilab</a></li>
-          </ul>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }

@@ -2,13 +2,16 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Header from "./header"
+import Footer from "./footer"
+import "./footer.css"
 import "./entry.css"
 
 function Entry({ children }) {
     return (
         <>
         <Header/>
-        <div>{children}</div>
+        <div class="full-inner">{children}</div>
+        <Footer />
         </>
     )
 }

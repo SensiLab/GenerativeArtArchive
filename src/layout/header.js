@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import "./header.css"
 
 const Header = () => (
-  <header>
+  <header className="full-inner">
     <h1>
       <Link to="/">Generative Systems Archive</Link>
     </h1>

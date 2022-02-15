@@ -6,7 +6,7 @@ import Layout from "../../../layout/entry"
 function Entry({ data }) {  
     return (
       <Layout>
-        <div>
+        <div className="breadcrumb">
           <Link to="/">Home</Link> / { data.markdownRemark.frontmatter.type }s
         </div>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
