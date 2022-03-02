@@ -8,6 +8,8 @@
 ` npm `
 ` gatsby-cli `
 
+https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+
 ### 1. Navigate into your new site’s directory and start it up.
 
 ```shell
@@ -26,7 +28,7 @@ Edit `src/pages/index.js` to see your site update in real-time!
 
 1. Navigate to the `entries/` folder and to the relevant subdirectory _(`algorithms`, `artworks`, `concepts` or `examples`)_
 
-2. Create a new file `entry-name.md` or subdirectory `entry-name/`
+2. Create a new file `entry-name.md` or subdirectory `entry-name/` with `index.md` file
 
 ### Entry template
 ```
