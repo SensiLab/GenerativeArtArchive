@@ -37,6 +37,14 @@ a {
   color: #F67138;
 }
 
+code {
+  display: inline-block;
+  white-space: normal;
+  max-width:100%;
+  word-break:break-all;
+  word-wrap:break-word;
+}
+
 .featured {
   background: linear-gradient(95.39deg, #F4EFEF 33.79%, rgba(251, 205, 205, 0) 100%);
 }
@@ -96,4 +104,15 @@ a {
   width: 200px;
   height: 200px;
   display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  section, .full-inner{
+    width: 100%;
+    padding: 1rem 20px;
+  }
+
+  header.full-inner {
+    padding: 0 20px;
+  }
 }
