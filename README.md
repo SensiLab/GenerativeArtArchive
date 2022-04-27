@@ -44,4 +44,4 @@ Edit `src/pages/index.js` to see your site update in real-time!
   content here.
 ```
 
-3. Create, then submit a pull request and for a reviewer to have a look at.
+3. Create, then submit a pull request for a reviewer to have a look at.
