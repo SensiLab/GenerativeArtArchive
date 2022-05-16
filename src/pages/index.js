@@ -11,7 +11,7 @@ const Index = ({ data }) => {
     <main className="homepage">
       <title>Home Page</title>
       <header>
-        <div class="full-inner">
+        <div className="full-inner">
           <h1>Generative Systems Archive</h1>
         </div>
       </header>
@@ -37,8 +37,11 @@ const Index = ({ data }) => {
               {data.concepts.nodes.map(entry => (
                 <li key={entry.frontmatter.title}>
                   <Link to={entry.slug}>
-                    <div className="img-placeholder"></div>
-                    <div className="entry-detail">
+                      {entry.frontmatter.thumbnail
+                        ? <img className="thumbnail" src={entry.frontmatter.thumbnail.publicURL} />
+                        : <div className="img-placeholder"></div>
+                      }
+                      <div className="entry-detail">
                       <h3>
                         {entry.frontmatter.title}
                       </h3>
@@ -56,7 +59,10 @@ const Index = ({ data }) => {
             {data.algorithms.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
                   <Link to={entry.slug}>
-                    <div className="img-placeholder"></div>
+                    {entry.frontmatter.thumbnail
+                      ? <img className="thumbnail" src={entry.frontmatter.thumbnail.publicURL} />
+                      : <div className="img-placeholder"></div>
+                    }
                     <div className="entry-detail">
                       <h3>
                         {entry.frontmatter.title}
@@ -75,8 +81,11 @@ const Index = ({ data }) => {
             {data.examples.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
                   <Link to={entry.slug}>
-                    <div className="img-placeholder"></div>
-                    <div className="entry-detail">
+                      {entry.frontmatter.thumbnail
+                        ? <img className="thumbnail" src={entry.frontmatter.thumbnail.publicURL} />
+                        : <div className="img-placeholder"></div>
+                      }
+                      <div className="entry-detail">
                       <h3>
                         {entry.frontmatter.title}
                       </h3>
@@ -120,6 +129,9 @@ export const query = graphql`
         frontmatter {
           title
           type
+          thumbnail {
+            publicURL
+          }
         }
       }
     }
@@ -129,6 +141,9 @@ export const query = graphql`
         frontmatter {
           title
           type
+          thumbnail {
+            publicURL
+          }
         }
       }
     }
@@ -138,6 +153,9 @@ export const query = graphql`
         frontmatter {
           title
           type
+          thumbnail {
+            publicURL
+          }
         }
       }
     }
@@ -147,6 +165,9 @@ export const query = graphql`
         frontmatter {
           title
           type
+          thumbnail {
+            publicURL
+          }
         }
       }
     }

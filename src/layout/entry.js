@@ -10,7 +10,7 @@ function Entry({ children }) {
     return (
         <>
         <Header/>
-        <div class="full-inner">{children}</div>
+        <div className="full-inner">{children}</div>
         <Footer />
         </>
     )

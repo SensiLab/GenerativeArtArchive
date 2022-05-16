@@ -99,11 +99,14 @@ code {
   min-height: 40px;
 }
 
-.img-placeholder {
-  background: linear-gradient(164.14deg, #FA9494 4.78%, #742A2A 88.94%);
+.img-placeholder, .thumbnail {
   width: 200px;
   height: 200px;
   display: block;
+}
+
+.img-placeholder {
+  background: linear-gradient(164.14deg, #FA9494 4.78%, #742A2A 88.94%);
 }
 
 @media screen and (max-width: 1200px) {

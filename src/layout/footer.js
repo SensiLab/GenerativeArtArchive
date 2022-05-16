@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const Footer = () => (
   <footer>
-    <div class="full-inner">
+    <div className="full-inner">
       <h1>
         <Link to="/">Generative Systems Archive</Link>
       </h1>
