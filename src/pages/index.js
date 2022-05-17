@@ -1,12 +1,15 @@
 import * as React from "react"
-import { graphql, Link } from "gatsby"
+import { Link } from "gatsby"
 
 import Footer from "../layout/footer"
 import "../layout/footer.css"
 import "../layout/index.css"
+import "../layout/content-list.css"
+import { useEntriesData } from "../entry-queries"
 
 // markup
 const Index = ({ data }) => {
+  const entries = useEntriesData()
   return (
     <main className="homepage">
       <title>Home Page</title>
@@ -27,14 +30,14 @@ const Index = ({ data }) => {
           <a href="/entries/concepts/randomness/">Start reading</a>
         </div>
       </section>
-      <section id="entries">
+      <section class="entries">
         <div>
           <h1>Explore generative systems</h1>
           <h2>
-            Concepts
+            <Link to="/entries/concepts">Concepts</Link>
           </h2>
           <ul>
-              {data.concepts.nodes.map(entry => (
+              {entries.concepts.nodes.map(entry => (
                 <li key={entry.frontmatter.title}>
                   <Link to={entry.slug}>
                       {entry.frontmatter.thumbnail
@@ -53,10 +56,10 @@ const Index = ({ data }) => {
       </div>
       <div>
         <h2>
-          Algorithms
+        <Link to="/entries/algorithms">Algorithms</Link>
         </h2>
         <ul>
-            {data.algorithms.nodes.map(entry => (
+            {entries.algorithms.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
                   <Link to={entry.slug}>
                     {entry.frontmatter.thumbnail
@@ -78,7 +81,7 @@ const Index = ({ data }) => {
           Examples
         </h2>
         <ul>
-            {data.examples.nodes.map(entry => (
+            {entries.examples.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
                   <Link to={entry.slug}>
                       {entry.frontmatter.thumbnail
@@ -97,10 +100,10 @@ const Index = ({ data }) => {
       </div>
       <div>
         <h2>
-          Artworks
+        <Link to="/entries/artworks">Artworks</Link>
         </h2>
         <ul>
-            {data.artworks.nodes.map(entry => (
+            {entries.artworks.nodes.map(entry => (
               <li key={entry.frontmatter.title}>
                 <h3>
                   <Link to={entry.slug}>
@@ -120,56 +123,3 @@ const Index = ({ data }) => {
 }
 
 export default Index
-
-export const query = graphql`
-  {
-    concepts: allMarkdownRemark(filter: {frontmatter: {type: {eq: "concept"}}}) {
-      nodes {
-        slug: gatsbyPath(filePath: "/entries/{MarkdownRemark.parent__(File)__relativeDirectory}/{MarkdownRemark.parent__(File)__name}")
-        frontmatter {
-          title
-          type
-          thumbnail {
-            publicURL
-          }
-        }
-      }
-    }
-    algorithms: allMarkdownRemark(filter: {frontmatter: {type: {eq: "algorithm"}}}) {
-      nodes {
-        slug: gatsbyPath(filePath: "/entries/{MarkdownRemark.parent__(File)__relativeDirectory}/{MarkdownRemark.parent__(File)__name}")
-        frontmatter {
-          title
-          type
-          thumbnail {
-            publicURL
-          }
-        }
-      }
-    }
-    examples: allMarkdownRemark(filter: {frontmatter: {type: {eq: "example"}}}) {
-      nodes {
-        slug: gatsbyPath(filePath: "/entries/{MarkdownRemark.parent__(File)__relativeDirectory}/{MarkdownRemark.parent__(File)__name}")
-        frontmatter {
-          title
-          type
-          thumbnail {
-            publicURL
-          }
-        }
-      }
-    }
-    artworks: allMarkdownRemark(filter: {frontmatter: {type: {eq: "artwork"}}}) {
-      nodes {
-        slug: gatsbyPath(filePath: "/entries/{MarkdownRemark.parent__(File)__relativeDirectory}/{MarkdownRemark.parent__(File)__name}")
-        frontmatter {
-          title
-          type
-          thumbnail {
-            publicURL
-          }
-        }
-      }
-    }
-  }
-`
