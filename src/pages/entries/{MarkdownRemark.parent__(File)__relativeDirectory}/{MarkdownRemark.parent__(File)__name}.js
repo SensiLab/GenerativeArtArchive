@@ -7,7 +7,8 @@ function Entry({ data }) {
     return (
       <Layout>
         <div className="breadcrumb">
-          <Link to="/">Home</Link> / { data.markdownRemark.frontmatter.type }s
+          <Link to="/">Home</Link> /&nbsp;
+          <Link to={`/entries/${data.markdownRemark.frontmatter.type}s`}>{ data.markdownRemark.frontmatter.type }s</Link>
         </div>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
       </Layout>

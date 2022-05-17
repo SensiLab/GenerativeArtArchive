@@ -1,5 +1,8 @@
 .directory-list {
-  padding: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 0 0 1rem;
 }
 
 .directory-list li {

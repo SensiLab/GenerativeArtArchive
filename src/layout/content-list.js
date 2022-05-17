@@ -10,13 +10,15 @@ function ContentList({ children }) {
   return (
     <>
     <Header/>
-      <ul className="directory-list full-inner">      
+    <div className="full-inner">
+      <ul className="directory-list">      
         <li><Link to="/">Home</Link></li>
         <li><Link to="/entries/concepts">Concepts</Link></li>
         <li><Link to="/entries/algorithms">Algorithms</Link></li>
         <li><Link to="/entries/artworks">Artworks</Link></li>
       </ul>
-    <div className="full-inner">{children}</div>
+      {children}
+    </div>
     <Footer />
     </>
   )
