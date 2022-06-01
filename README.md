@@ -38,6 +38,7 @@ Edit `src/pages/index.js` to see your site update in real-time!
   description: brief description here
   creator: Creator Name
   rights: eg. Public Domain (CC0)
+  thumbnail: file name of thumbnail (in same directory)
   ---
 
   ##Title
