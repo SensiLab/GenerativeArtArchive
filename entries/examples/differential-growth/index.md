@@ -25,7 +25,8 @@ You can play around with the parameters on the right hand side.
 
 To see the code, click the __</>__ symbol on the top-right hand of the sketch.
 
-<iframe height="500" style="width: 900px" scrolling="no" title="Differential growth" src=https://editor.p5js.org/GenArtRepo/full/VXVovWGUB frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<iframe height="500" style="width: 900px" scrolling="no" title="Differential growth" src="https://editor.p5js.org/GenArtRepo/full/VXVovWGUB" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+
 
 ## References
 

@@ -1,7 +1,7 @@
 ---
 title: Randomness
 type: concept
-description:
+description: An article about randomness
 creator: Camilo Cruz
 rights: Public Domain (CC0)
 ---

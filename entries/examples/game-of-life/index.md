@@ -4,10 +4,14 @@ type: example
 description: 
 creator: Cristian Rojas Cardenas
 rights: Public Domain (CC0)
+keywords: cellular-automata, complexity
 ---
 
 # John Conway's Game of Life
--- add reference image from original paper --
+
+![Conways Game of Life on a LED Matrix](./Conways-Game-of-Life.jpeg)
+
+Image credit: [Simon Waldherr on commons.wikimedia.org](https://commons.wikimedia.org/wiki/User:SimonWaldherr)
 
 Developed by John Conway as a mathematical game [1], _life_ is a cellular automaton [Ref to CA entry] that, despite its simple rules, is capable of producing a large variety of complex shapes and behaviours.
 
@@ -20,8 +24,6 @@ As suggested by the name, _life_ draws concepts from naturally occurring phenome
 - If a cell is dead, but has exactly 3 live neighbours, it'll come to life in the next time step.
 
 ## A live example
-
-<!-- <iframe height="500" style="width: 900px" scrolling="no" title="Game of Life" src="https://codepen.io/crarojasca/embed/gOoXraW" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe> -->
 
 <iframe height="500" style="width: 900px" scrolling="no" title="Game of Life" src="https://editor.p5js.org/GenArtRepo/sketches/eApzAakXq" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
