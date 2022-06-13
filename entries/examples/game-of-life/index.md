@@ -9,7 +9,8 @@ keywords: cellular-automata, complexity
 
 # John Conway's Game of Life
 
-![Conways Game of Life on a LED Matrix](./Conways-Game-of-Life.jpeg)
+<!-- ![Conways Game of Life on a LED Matrix](./Conways-Game-of-Life.jpeg) -->
+[Conways Game of Life on a LED Matrix]<img src="./Conways-Game-of-Life.jpeg" alt="drawing" width="100"/>
 
 Image credit: [Simon Waldherr on commons.wikimedia.org](https://commons.wikimedia.org/wiki/User:SimonWaldherr)
 
