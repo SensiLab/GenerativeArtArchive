@@ -13,7 +13,7 @@ keywords: cellular-automata, complexity
 
 Image credit: [Simon Waldherr on commons.wikimedia.org](https://commons.wikimedia.org/wiki/User:SimonWaldherr)
 
-Developed by John Conway as a mathematical game [1], _life_ is a cellular automaton [Ref to CA entry] that, despite its simple rules, is capable of producing a large variety of complex shapes and behaviours.
+Developed by John Conway as a mathematical game [1], _life_ is a [cellular automaton](../../algorithms/cellular-automata/index.md) that, despite its simple rules, is capable of producing a large variety of complex shapes and behaviours.
 
 ## How it works
 
