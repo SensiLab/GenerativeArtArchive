@@ -1,12 +1,10 @@
 ---
-
 title: Vertical-Horizontal #3
 type: artwork
 description:
 creator: A. Michael Noll
 rights: Public Domain (CC0)
 thumbnail: 
-
 ---
 
 # Vertical-Horizontal #3
