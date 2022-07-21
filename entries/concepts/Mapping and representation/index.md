@@ -1,10 +1,27 @@
 ---
+
 title: Mapping and Representation
+
 type: concept
+
 description: An overview of how numbers become artistic production
+
 creator: Generative Repository Team
+
 rights: Public Domain (CC0)
+
 keywords: 
+
+thumbnail: 
+
+related_concepts: 
+
+related_examples:
+
+related_algorithms:
+
+related_artwork:
+
 ---
 
 # Mapping and Representation

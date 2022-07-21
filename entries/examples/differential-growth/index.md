@@ -4,9 +4,14 @@ type: example
 description: 
 creator: Cristian Rojas Cardenas, Camilo Cruz Gambardella
 rights: Public Domain (CC0)
+thumbnail: imgs/dg_thumb.png
 ---
 
 # Differential Growth
+
+![Floraform bt Nervous System](imgs/dg1.png)
+
+Image credit: [Credit: Ars Electronica / Christopher Sonnleitner on flickr.com](https://www.flickr.com/photos/arselectronica/34563904231)
 
 The wide variety of complex, and so-called __"organic"__ shapes exhibited by plants and other living organisms, emerges through a process called morphogenesis. Differential growth is the main mechanism driving the formation of these complex shapes and patterns, and as it's name indicates, it is the the carefully regulated process through which cells subdivide and differentiate from each other. However, and despite large efforts into understanding how differential growth is regulated via the influence of genetic and environmental forces, it's guiding principles remain largely unknown [1].
 
@@ -25,7 +30,15 @@ You can play around with the parameters on the right hand side.
 
 To see the code, click the __</>__ symbol on the top-right hand of the sketch.
 
-<iframe height="500" style="width: 900px" scrolling="no" title="Differential growth" src="https://editor.p5js.org/GenArtRepo/full/VXVovWGUB" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<iframe height="500" style="width: 100%" scrolling="no" title="Differential growth" src="https://codesandbox.io/embed/github/GenArtRepo/differential-growth/tree/main/?fontsize=14&hidenavigation=1&theme=dark?module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+
+
+<!-- <iframe src="https://codesandbox.io/embed/github/GenArtRepo/differential-growth/tree/main/?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="GenArtRepo/differential-growth"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe> -->
 
 
 ## References

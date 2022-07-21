@@ -12,8 +12,31 @@ rights: Public Domain (CC0)
 
 keywords: self-similarity, artist-friendly, sampling, synthesis
 
+thumbnail: js1.jpeg
+
 ---
 # Julia Sets
+![Julia Set example](js1.jpeg)
+
+Image credit: [Dominic Alves on flikr.com](https://www.flickr.com/photos/dominicspics/5419214031)
+
+## How it works
+
+
+
+
+
+
+## A live example
+
+<iframe height="500" style="width: 100%" scrolling="no" title="Julia Sets" src="https://codesandbox.io/embed/github/GenArtRepo/julia-set/tree/main/?fontsize=14&hidenavigation=1&theme=dark?module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+
+<!-- <iframe src="https://codesandbox.io/embed/github/GenArtRepo/julia-set/tree/main/?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="GenArtRepo/julia-set"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe> -->
 
 
 ## References

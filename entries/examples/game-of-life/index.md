@@ -1,16 +1,22 @@
 ---
 title: Conway's Game of Life
+
 type: example
-description: 
+
+description: Game of Life is a 2D implementation of a cellular automaton in which complex behaviours emerge from a set of simple update rules. 
+
 creator: Cristian Rojas Cardenas
+
 rights: Public Domain (CC0)
-keywords: cellular-automata, complexity
+
+keywords: cellular-automata, complexity, emergence
+
+thumbnail: ./imgs/gol_thumbnail.png
 ---
 
 # John Conway's Game of Life
 
-<!-- ![Conways Game of Life on a LED Matrix](./Conways-Game-of-Life.jpeg) -->
-[Conways Game of Life on a LED Matrix]<img src="./Conways-Game-of-Life.jpeg" alt="drawing" width="100"/>
+![Conways Game of Life on a LED Matrix](./imgs/Conways-Game-of-Life2.jpg)
 
 Image credit: [Simon Waldherr on commons.wikimedia.org](https://commons.wikimedia.org/wiki/User:SimonWaldherr)
 
@@ -26,7 +32,14 @@ As suggested by the name, _life_ draws concepts from naturally occurring phenome
 
 ## A live example
 
-<iframe height="500" style="width: 900px" scrolling="no" title="Game of Life" src="https://editor.p5js.org/GenArtRepo/sketches/eApzAakXq" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+<iframe height="500" style="width: 100%" scrolling="no" title="Game of Life" src="https://codesandbox.io/embed/github/GenArtRepo/game-of-life/tree/main/?fontsize=14&hidenavigation=1&theme=dark&module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
+
+<!-- <iframe src="https://codesandbox.io/embed/github/GenArtRepo/game-of-life/tree/main/?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="GenArtRepo/game-of-life"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe> -->
 
 ## References
 
