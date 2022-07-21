@@ -5,18 +5,17 @@ type: artwork
 description:
 creator: A. Michael Noll
 rights: Public Domain (CC0)
+thumbnail: 
 
 ---
 
-Vertical-Horizontal #3
-======================
+# Vertical-Horizontal #3
 
 ![](https://lh6.googleusercontent.com/64ryEuFwRqVGybp5zYzeAyr3zrjX6fH_REkKBKPfUi9mjYWuGzDjGebleE3xQelLaNQhTmYdll1XvWSIz3xIZ7Si1aDvQaAHHKYr6z0fzdYKFC_rNO7nUYL-gJtdlEt6Z3fFcLu4)
 
 A. Michael Noll is considered one of the pioneers of computer generative art. Vertical-Horizontal #3 was produced by placing a point on the screen with random x and y coordinates. Then, these coordinates are randomly modified alternately, producing horizontal and vertical lines.
 
-Technical specifications
-------------------------
+## Technical specifications
 
 Title: Vertical-Horizontal #3
 
@@ -32,18 +31,16 @@ Publisher: A. Michael Noll
 
 Source: http://noll.uscannenberg.org/CompArtExamples.htm
 
-Related concepts, algorithms and examples
------------------------------------------
+## Related concepts, algorithms and examples
+
 
 Vertical-Horizontal example
 
-Related Artwork
----------------
+## Related Artwork
 
 Gaussian Quadratic (A. Michael Noll)
 
-References
-----------
+## References
 
 Noll, A. Michael (website) [http://noll.uscannenberg.org](http://noll.uscannenberg.org/)
 
