@@ -5,6 +5,7 @@ import Footer from "../layout/footer"
 import "../layout/footer.css"
 import "../layout/index.css"
 import "../layout/content-list.css"
+import SearchBox from "../components/search-box"
 import { useEntriesData } from "../entry-queries"
 
 // markup
@@ -17,6 +18,7 @@ const Index = ({ data }) => {
         <div className="full-inner">
           <h1>Generative Systems Archive</h1>
         </div>
+        <SearchBox />
       </header>
       <section>
         <h1>A home for generative systems.</h1>
@@ -30,7 +32,7 @@ const Index = ({ data }) => {
           <a href="/entries/concepts/randomness/">Start reading</a>
         </div>
       </section>
-      <section class="entries">
+      <section className="entries">
         <div>
           <h1>Explore generative systems</h1>
           <h2>

@@ -39,37 +39,37 @@ module.exports = {
         ],
       },
     },
-  // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "concepts",
-    //     path: "./entries/concepts",
-    //   },
-    //   __key: "concepts",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "algorithms",
-    //     path: "./entries/algorithms",
-    //   },
-    //   __key: "algorithms",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "examples",
-    //     path: "./entries/examples",
-    //   },
-    //   __key: "examples",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "artworks",
-    //     path: "./entries/artworks",
-    //   },
-    //   __key: "artworks",
-    // },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'entries',
+        engine: 'flexsearch',
+        engineOptions: 'speed',
+        query: `
+          {
+            allMarkdownRemark {
+              nodes {
+                slug: gatsbyPath(filePath: "/entries/{MarkdownRemark.parent__(File)__relativeDirectory}/{MarkdownRemark.parent__(File)__name}")
+                id
+                frontmatter {
+                  title
+                }
+                rawMarkdownBody
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'body', 'rawMarkdownBody'],
+        store: ['id', 'title', 'slug'],
+        normalizer: ({ data }) =>
+          data.allMarkdownRemark.nodes.map((node) => ({
+            id: node.id,
+            slug: node.slug,
+            title: node.frontmatter.title,
+            body: node.rawMarkdownBody,
+          })),
+      },
+    },
   ],
 };
