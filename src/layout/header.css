@@ -12,3 +12,15 @@ header h1 a {
   text-decoration: inherit;
   color: inherit;
 }
+
+header .full-inner {
+  z-index: 2;
+  position: relative;
+  height: 400px;
+}
+
+.feature-header {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}

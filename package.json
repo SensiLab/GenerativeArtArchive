@@ -15,6 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@loadable/component": "^5.15.2",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^3.14.4",
@@ -24,8 +25,10 @@
     "gatsby-plugin-sitemap": "^4.10.0",
     "gatsby-remark-gifs": "^1.1.0",
     "gatsby-source-filesystem": "^3.14.0",
+    "p5": "^1.4.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-p5": "^1.3.30",
     "sass": "^1.41.1"
   },
   "devDependencies": {
