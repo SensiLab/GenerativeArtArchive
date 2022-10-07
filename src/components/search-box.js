@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useFlexSearch } from 'react-use-flexsearch'
 import { navigate, useStaticQuery, graphql } from "gatsby"
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
 import { Autocomplete } from '@mui/material';
 import { TextField } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 
 const SearchBox = () => {
     const [query, setQuery] = useState('')
+    const [open, setOpen] = React.useState(false);
     const searchData = useStaticQuery(
         graphql`
         {
@@ -37,15 +41,35 @@ const SearchBox = () => {
         navigate('/search?search='+value[0])
     }
 
+    const dialogOpen = () => setOpen(true);
+    const dialogClose = () => setOpen(false);
+
     return (
         <div>
-            <Autocomplete
-                options={options}
-                getOptionLabel={o => o[0]}
-                onInputChange={(_e, value) => {setQuery(value)}}
-                onChange={goToSearch}
-                renderInput={(params) => <TextField {...params} label="Search" />}
-            />
+            <button onClick={dialogOpen}>Search</button>
+            <Dialog open={open} onClose={dialogClose}>
+                <DialogContent>
+                    <IconButton
+                        aria-label="close"
+                        onClick={dialogClose}
+                        sx={{
+                            position: 'absolute',
+                            right: 8,
+                            top: 8,
+                            color: (theme) => theme.palette.grey[500],
+                        }}
+                        >
+                        &#x2715;
+                    </IconButton>
+                    <Autocomplete
+                        options={options}
+                        getOptionLabel={o => o[0]}
+                        onInputChange={(_e, value) => {setQuery(value)}}
+                        onChange={goToSearch}
+                        renderInput={(params) => <TextField {...params} label="Search" />}
+                    />
+                </DialogContent>
+            </Dialog>
         </div>
     )
 }
