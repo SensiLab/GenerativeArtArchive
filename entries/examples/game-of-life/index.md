@@ -1,26 +1,15 @@
 ---
 title: Conway's Game of Life
-
 type: example
-
-description: Game of Life is a 2D implementation of a cellular automaton in which complex behaviours emerge from a set of simple update rules. 
-
+description: 
 creator: Cristian Rojas Cardenas
-
 rights: Public Domain (CC0)
-
-keywords: cellular-automata, complexity, emergence
-
-thumbnail: ./imgs/gol_thumbnail.png
 ---
 
 # John Conway's Game of Life
+-- add reference image from original paper --
 
-![Conways Game of Life on a LED Matrix](./imgs/Conways-Game-of-Life2.jpg)
-
-Image credit: [Simon Waldherr on commons.wikimedia.org](https://commons.wikimedia.org/wiki/User:SimonWaldherr)
-
-Developed by John Conway as a mathematical game [1], _life_ is a [cellular automaton](../../algorithms/cellular-automata/index.md) that, despite its simple rules, is capable of producing a large variety of complex shapes and behaviours.
+Developed by John Conway as a mathematical game [1], _life_ is a cellular automaton [Ref to CA entry] that, despite its simple rules, is capable of producing a large variety of complex shapes and behaviours.
 
 ## How it works
 
@@ -32,14 +21,7 @@ As suggested by the name, _life_ draws concepts from naturally occurring phenome
 
 ## A live example
 
-<iframe height="500" style="width: 100%" scrolling="no" title="Game of Life" src="https://codesandbox.io/embed/github/GenArtRepo/game-of-life/tree/main/?fontsize=14&hidenavigation=1&theme=dark&module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-<!-- <iframe src="https://codesandbox.io/embed/github/GenArtRepo/game-of-life/tree/main/?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="GenArtRepo/game-of-life"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe> -->
+<iframe height="500" style="width: 900px" scrolling="no" title="Game of Life" src="https://codepen.io/crarojasca/embed/gOoXraW" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
 ## References
 

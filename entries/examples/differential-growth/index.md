@@ -1,10 +1,21 @@
 ---
+
 title: Differential Growth
+
 type: example
+
 description: 
-creator: Cristian Rojas Cardenas, Camilo Cruz Gambardella
+
+code: Cristian Rojas Cardenas
+
+author: Camilo Cruz Gambardella
+
 rights: Public Domain (CC0)
-thumbnail: imgs/dg_thumb.png
+
+keywords: physics simulation, complexity, agent-based, steering-behaviours
+
+thumbnail: imgs/dla_thumb.png
+
 ---
 
 # Differential Growth
@@ -13,34 +24,27 @@ thumbnail: imgs/dg_thumb.png
 
 Image credit: [Credit: Ars Electronica / Christopher Sonnleitner on flickr.com](https://www.flickr.com/photos/arselectronica/34563904231)
 
-The wide variety of complex, and so-called __"organic"__ shapes exhibited by plants and other living organisms, emerges through a process called morphogenesis. Differential growth is the main mechanism driving the formation of these complex shapes and patterns, and as it's name indicates, it is the the carefully regulated process through which cells subdivide and differentiate from each other. However, and despite large efforts into understanding how differential growth is regulated via the influence of genetic and environmental forces, it's guiding principles remain largely unknown [1].
+The wide variety of complex shapes exhibited by plants and other living organisms –_organic shapes_– emerges through a process called morphogenesis. Differential growth (DG) is the main mechanism driving the formation of these intricate shapes and patterns, and as the name indicates, it can be defined as the the carefully regulated process through which cells subdivide and differentiate from each other. However, and despite large efforts into understanding how differential growth is regulated via the influence of genetic and environmental forces, it's guiding principles remain largely unknown ([1](#1)).
 
-
-
+Nevertheless, DG-simulations are relatively easy to implement in software, as following a set of simple rules
 
 ## How it works
 
-In this article we use the metaphor of a rope of interconnected nodes to simulate 2D differential growth.
+To explain how differential growth behaviour can be simulated, the metaphor of a rope of interconnected nodes is the most common approach. In this rope, each node follows two rules:
 
+- Separation: Try not to collide with other surrounding nodes.
+- Cohesion: Try to stay close to surrounding nodes.
 
+Additionally, when the length of _rope_ between two consecutive nodes exceeds a certain threshold, a new node is added on the mid-point of said section of _rope_. This is how the rope _grows_.
 
 ## A live example
 
 You can play around with the parameters on the right hand side.
 
-To see the code, click the __</>__ symbol on the top-right hand of the sketch.
-
-<iframe height="500" style="width: 100%" scrolling="no" title="Differential growth" src="https://codesandbox.io/embed/github/GenArtRepo/differential-growth/tree/main/?fontsize=14&hidenavigation=1&theme=dark?module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-
-
-<!-- <iframe src="https://codesandbox.io/embed/github/GenArtRepo/differential-growth/tree/main/?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
-     title="GenArtRepo/differential-growth"
-     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
-     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
-   ></iframe> -->
+<iframe height="500" style="width: 90%" scrolling="no" title="Differential growth" src="https://codesandbox.io/embed/github/GenArtRepo/differential-growth/tree/main/?fontsize=14&hidenavigation=1&theme=dark?module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
 
 ## References
 
-1. Huang, C. __et al__ (2018) Differential growth and shape formation in plant organs. Proceedings of the National Academy of Sciences 115(49)  [(accessed here)] (https://www.pnas.org/doi/10.1073/pnas.1811296115)
+<a name="1"></a>1. Huang, C. __et al__ (2018) Differential growth and shape formation in plant organs. Proceedings of the National Academy of Sciences 115(49)  [(accessed here)](https://www.pnas.org/doi/10.1073/pnas.1811296115)
+<a name="2"></a>2. Hoff, A. On Generative Algorithms - Differential Line [(accessed here)](https://inconvergent.net/generative/differential-line/)

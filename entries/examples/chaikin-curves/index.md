@@ -4,11 +4,17 @@ type: example
 description:
 creator: Camilo Cruz Gambardella
 rights: Public Domain (CC0)
+thumbnail: 
+tags: curves, line drawing
 ---
 
 # Chaikin Curves
 
 Presented by George Chaikin in 1974 [1], the Chaikin Curves algorithm is recognised as one of the first curve-refinement procedures [2]. The particularity of this approach is that it works directly with the control polygon by “cutting corners”, rather than taking an analytical approach like Bezier Curves
+
+An example of an iframe
+
+<iframe src="scripts/example.html" width="400" height="400"></iframe>
 
 ## How it works
 
