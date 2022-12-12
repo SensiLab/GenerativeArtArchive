@@ -110,6 +110,10 @@ const Index = ({ data }) => {
               <li key={entry.frontmatter.title}>
                 <h3>
                   <Link to={entry.slug}>
+                    {entry.frontmatter.thumbnail
+                        ? <img className="thumbnail" src={entry.frontmatter.thumbnail.publicURL} />
+                        : <div className="img-placeholder"></div>
+                      }
                     <h3>
                       {entry.frontmatter.title}
                     </h3>
