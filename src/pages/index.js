@@ -4,12 +4,9 @@ import { graphql, Link } from "gatsby"
 import Footer from "../layout/footer"
 import "../layout/footer.css"
 import "../layout/index.css"
-<<<<<<< HEAD
-=======
 import "../layout/content-list.css"
 import SearchBox from "../components/search-box"
 import { useEntriesData } from "../entry-queries"
->>>>>>> search
 
 // markup
 const Index = ({ data }) => {
@@ -34,11 +31,7 @@ const Index = ({ data }) => {
           <a href="/entries/concepts/randomness/">Start reading</a>
         </div>
       </section>
-<<<<<<< HEAD
-      <section id="entries">
-=======
       <section className="entries">
->>>>>>> search
         <div>
           <h1>Explore generative systems</h1>
           <h2>
