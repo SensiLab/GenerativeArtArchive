@@ -41,7 +41,7 @@ const Index = ({ data }) => {
           </h2>
           <ul>
             {entries.concepts.nodes.map(entry => (
-                <li key={entry.frontmatter.title}>
+                <li key={`concept-${entry.frontmatter.title}`}>
                   <Link to={entry.slug}>
                     {entry.frontmatter.thumbnail
                       ? <img className="thumbnail" src={entry.frontmatter.thumbnail.publicURL} />
@@ -63,7 +63,7 @@ const Index = ({ data }) => {
         </h2>
         <ul>
           {entries.algorithms.nodes.map(entry => (
-              <li key={entry.frontmatter.title}>
+              <li key={`algorithm-${entry.frontmatter.title}`}>
                   <Link to={entry.slug}>
                     {entry.frontmatter.thumbnail
                       ? <img className="thumbnail" src={entry.frontmatter.thumbnail.publicURL} />
@@ -107,7 +107,7 @@ const Index = ({ data }) => {
         </h2>
         <ul>
           {entries.artworks.nodes.map(entry => (
-              <li key={entry.frontmatter.title}>
+              <li key={`artwork-${entry.frontmatter.title}`}>
                 <h3>
                   <Link to={entry.slug}>
                     {entry.frontmatter.thumbnail
