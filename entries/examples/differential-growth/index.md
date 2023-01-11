@@ -12,10 +12,9 @@ author: Camilo Cruz Gambardella
 
 rights: Public Domain (CC0)
 
-keywords: physics simulation, complexity, agent-based, steering-behaviours
-
 thumbnail: imgs/dla_thumb.png
 
+tags: physics simulation, complexity, agent-based, steering-behaviours
 ---
 
 # Differential Growth
