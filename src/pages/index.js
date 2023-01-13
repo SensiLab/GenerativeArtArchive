@@ -17,10 +17,14 @@ const Index = ({ data }) => {
       <HeaderExpanded />
       <section className="featured full">
         <div className="full-inner">
-          <h2>Featured article</h2>
-          <h1>Randomness</h1>
-          <p>Randomness is a concept that is well integrated into our common speech, however it escapes unequivocal definitions. The word random is commonly used to describe either things that happen by chance –unexpectedly or with no discernible cause–, or to characterise collections or series of things that don’t seem to have any discernible pattern or order.</p>
-          <a href="/entries/concepts/randomness/">Start reading</a>
+          <div className="featured-title-matter">
+            <h2>Featured article</h2>
+            <h1>Randomness</h1>
+          </div>
+          <div className="featured-description">
+            <p>Randomness is a concept that is well integrated into our common speech, however it escapes unequivocal definitions. The word random is commonly used to describe either things that happen by chance –unexpectedly or with no discernible cause–, or to characterise collections or series of things that don’t seem to have any discernible pattern or order.</p>
+            <a className="start-reading" href="/entries/concepts/randomness/">Start reading</a>
+          </div>
         </div>
       </section>
       <section className="entries">
