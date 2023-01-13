@@ -21,6 +21,23 @@ module.exports = {
       },
       __key: "entries",
     },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `VT323s`,
+            file: `https://fonts.googleapis.com/css2?family=VT323`,
+          },
+          {
+            name: `Fira Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,

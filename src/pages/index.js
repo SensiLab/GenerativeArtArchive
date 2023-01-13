@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Footer from "../layout/footer"
 import HeaderExpanded from "../layout/header-expanded"
+import "../layout/global.css"
 import "../layout/index.css"
 import "../layout/content-list.css"
 import { useEntriesData } from "../entry-queries"
