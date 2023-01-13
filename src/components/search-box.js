@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { useFlexSearch } from 'react-use-flexsearch'
 import { navigate, useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -8,6 +9,7 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import IconButton from '@mui/material/IconButton';
 import SearchResults from './search-results';
+import "./search-box.css"
 
 const SearchBox = () => {
     const [query, setQuery] = useState('')
@@ -50,7 +52,13 @@ const SearchBox = () => {
 
     return (
         <div className="search">
-            <button onClick={dialogOpen}>Search</button>
+            <button onClick={dialogOpen}> 
+                <StaticImage
+                    src="../images/magnify.svg"
+                    alt="search icon"
+                    className="search-icon"
+                    width={28}
+                /></button>
             <Dialog open={open} onClose={dialogClose} fullWidth>
                 <DialogTitle>
                     <IconButton

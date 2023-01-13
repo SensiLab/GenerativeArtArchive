@@ -2,10 +2,9 @@ import * as React from "react"
 import { Link } from "gatsby"
 
 import Footer from "../layout/footer"
-import "../layout/footer.css"
+import HeaderExpanded from "../layout/header-expanded"
 import "../layout/index.css"
 import "../layout/content-list.css"
-import SearchBox from "../components/search-box"
 import { useEntriesData } from "../entry-queries"
 
 // markup
@@ -15,16 +14,7 @@ const Index = ({ data }) => {
   return (
     <main className="homepage">
       <title>Home Page</title>
-      <header>
-        <div className="full-inner">
-          <h1>Generative Systems Archive</h1>
-        </div>
-        <SearchBox />
-      </header>
-      <section>
-        <h1>A home for generative systems.</h1>
-        <p>An online resource where creative practioners, designers, students and researches interested in generative systems and methods can find information about existing generative systems, their cultural and technical contexts.</p>
-      </section>
+      <HeaderExpanded />
       <section className="featured full">
         <div className="full-inner">
           <h2>Featured article</h2>
