@@ -12,6 +12,8 @@ rights: Public Domain (CC0)
 
 keywords: map-generation, artist-friendly, sampling, synthesis
 
+thumbnail: wfc.png
+
 ---
 
 Wave Function Collapse

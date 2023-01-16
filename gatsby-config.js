@@ -21,6 +21,31 @@ module.exports = {
       },
       __key: "entries",
     },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        web: [
+          {
+            name: `VT323s`,
+            file: `https://fonts.googleapis.com/css2?family=VT323`,
+          },
+          {
+            name: `Fira Sans`,
+            file: `https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400`,
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     "gatsby-plugin-sharp",
     {
       resolve: `gatsby-transformer-remark`,
@@ -39,37 +64,37 @@ module.exports = {
         ],
       },
     },
-  // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "concepts",
-    //     path: "./entries/concepts",
-    //   },
-    //   __key: "concepts",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "algorithms",
-    //     path: "./entries/algorithms",
-    //   },
-    //   __key: "algorithms",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "examples",
-    //     path: "./entries/examples",
-    //   },
-    //   __key: "examples",
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     name: "artworks",
-    //     path: "./entries/artworks",
-    //   },
-    //   __key: "artworks",
-    // },
+    {
+      resolve: 'gatsby-plugin-local-search',
+      options: {
+        name: 'entries',
+        engine: 'flexsearch',
+        engineOptions: 'speed',
+        query: `
+          {
+            allMarkdownRemark {
+              nodes {
+                slug: gatsbyPath(filePath: "/entries/{MarkdownRemark.parent__(File)__relativeDirectory}/{MarkdownRemark.parent__(File)__name}")
+                id
+                frontmatter {
+                  title
+                }
+                rawMarkdownBody
+              }
+            }
+          }
+        `,
+        ref: 'id',
+        index: ['title', 'body', 'rawMarkdownBody'],
+        store: ['id', 'title', 'slug'],
+        normalizer: ({ data }) =>
+          data.allMarkdownRemark.nodes.map((node) => ({
+            id: node.id,
+            slug: node.slug,
+            title: node.frontmatter.title,
+            body: node.rawMarkdownBody,
+          })),
+      },
+    },
   ],
 };

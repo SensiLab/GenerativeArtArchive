@@ -1,6 +1,6 @@
 ---
 
-title: Vertical-Horizontal #3
+title: 'Vertical-Horizontal #3'
 type: artwork
 description:
 creator: A. Michael Noll
