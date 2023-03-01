@@ -18,9 +18,10 @@ tags: noise,
 
 ![Four examples of Worley noise](./imgs/wn1.png)
 
-Introduced by Steven Worley in 1996 [1], as a method to create natural-looking procedural textures in computer graphics, Worley noise uses an approach similar to the Voronoi diagram, where randomly distributed seed define areas in 2D or 3D space.
+Introduced by Steven Worley in 1996 [1], as a method to create natural-looking procedural textures in computer graphics, Worley noise uses an approach similar to the Voronoi diagram, where randomly distributed seed points – feature points – define areas in 2D or 3D space, which in turn define the colour information for every other point in that space. This produces textures that resemble stone, water, crystals and other microscopic cellular structures.
 
 ## How it works
+
 
 
 

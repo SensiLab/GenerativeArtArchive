@@ -42,6 +42,13 @@ You can play around with the parameters on the right hand side.
 
 <iframe height="500" style="width: 90%" scrolling="no" title="Differential growth" src="https://codesandbox.io/embed/github/GenArtRepo/differential-growth/tree/main/?fontsize=14&hidenavigation=1&theme=dark?module=sketch.js" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
 
+## Applications and examples
+
+There are many examples of generative art that use differential-growth algorithms, ranging from simple 2D patterns to complex 3D sculptures. Some artists use color or texture to add further complexity and visual interest to the generated structures. Here are a few examples:
+
+<!-- - "Differential Growth" by Raven Kwok: A series of abstract 3D sculptures that combine smooth curves and sharp angles to create intricate structures.
+- "Living Segments" by Memo Akten: A 2D pattern that simulates the growth and branching of plant cells, with each segment responding to its neighbors and the environment. -->
+- ["Xylem and Hyphae"](https://n-e-r-v-o-u-s.com/projects/sets/networks/) by N-e-r-v-o-u-s System: A series of 3D sculptures and installations inspired by the rhizomatic patterns found in fungi and coral.
 
 ## References
 
