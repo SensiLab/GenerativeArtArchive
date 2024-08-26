@@ -25,7 +25,10 @@ module.exports = {
       resolve: `gatsby-omni-font-loader`,
       options: {
         enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
         web: [
           {
             name: `VT323s`,
@@ -56,20 +59,20 @@ module.exports = {
             options: {
               maxWidth: 800,
               wrapperStyle:
-                'margin-left: 0!important; margin-right: 0!important;',
-              linkImagesToOriginal: false
+                "margin-left: 0!important; margin-right: 0!important;",
+              linkImagesToOriginal: false,
             },
           },
-          "gatsby-remark-gifs"
+          "gatsby-remark-gifs",
         ],
       },
     },
     {
-      resolve: 'gatsby-plugin-local-search',
+      resolve: "gatsby-plugin-local-search",
       options: {
-        name: 'entries',
-        engine: 'flexsearch',
-        engineOptions: 'speed',
+        name: "entries",
+        engine: "flexsearch",
+        engineOptions: "speed",
         query: `
           {
             allMarkdownRemark {
@@ -78,20 +81,24 @@ module.exports = {
                 id
                 frontmatter {
                   title
+                  type
+                  tags
                 }
                 rawMarkdownBody
               }
             }
           }
         `,
-        ref: 'id',
-        index: ['title', 'body', 'rawMarkdownBody'],
-        store: ['id', 'title', 'slug'],
+        ref: "id",
+        index: ["title", "body", "rawMarkdownBody", "tags"],
+        store: ["id", "title", "type", "tags", "slug"],
         normalizer: ({ data }) =>
           data.allMarkdownRemark.nodes.map((node) => ({
             id: node.id,
             slug: node.slug,
             title: node.frontmatter.title,
+            type: node.frontmatter.type,
+            tags: node.frontmatter.tags,
             body: node.rawMarkdownBody,
           })),
       },

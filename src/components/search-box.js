@@ -1,102 +1,120 @@
-import React, { useState, useRef } from 'react'
-import { useFlexSearch } from 'react-use-flexsearch'
-import { navigate, useStaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogContent from '@mui/material/DialogContent';
-import Autocomplete from '@mui/material/Autocomplete';
-import TextField from '@mui/material/TextField';
-import IconButton from '@mui/material/IconButton';
-import SearchResults from './search-results';
-import "./search-box.css"
+import React, { useState, useEffect } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
+import IconButton from "@mui/material/IconButton";
+import { styled } from "@mui/system";
+import SearchResults from "./search-results";
+import "./search-box.css";
+
+const QUERY_PREFIX = "Search for";
+
+const StyledOption = styled("li")(({ isCustomQuery }) => ({
+  ...(isCustomQuery && {
+    fontStyle: "italic",
+  }),
+}));
 
 const SearchBox = () => {
-    const [query, setQuery] = useState('')
-    const [open, setOpen] = useState(false);
-    const searchData = useStaticQuery(
-        graphql`
-        {
-            localSearchEntries {
-                store
-                index
-            }
-        }`
-    )
-    const store = searchData['localSearchEntries']['store']
-    const index = searchData['localSearchEntries']['index']
-    const options  = Object.entries(JSON.parse(index)[1])
-    const results = useFlexSearch(query, index, store)
+  const [query, setQuery] = useState("");
+  const [open, setOpen] = useState(false);
+  const [titles, setTitles] = useState([]);
 
-    // useEffect(() => {
-    //     console.log(results)
-    //     setOptions(results)
-    // }, [results]);
-    
-    // const onInputChange = (_e, value) => {
-    //     const results = useFlexSearch(value, index, store)
-    //     console.log(res)
-    //     setOptions(results)
-    // }
-    const goToSearch = (_e, value) => {
-        // _e.preventDefault()
-        setQuery(value[0])
-        // console.log(value[0])
-        // navigate('/search?search='+value[0])
+  const searchData = useStaticQuery(
+    graphql`
+      {
+        localSearchEntries {
+          store
+        }
+      }
+    `
+  );
+
+  const store = searchData["localSearchEntries"]["store"];
+
+  useEffect(() => {
+    const uniqueTitles = [
+      ...new Set(Object.values(store).map((item) => item.title)),
+    ];
+    setTitles(uniqueTitles);
+  }, [store]);
+
+  const handleInputChange = (_, newInputValue) => {
+    let newQuery;
+    if (newInputValue.startsWith(QUERY_PREFIX)) {
+      newQuery = newInputValue.split(QUERY_PREFIX)[1].trim();
+    } else {
+      newQuery = newInputValue;
     }
+    setQuery(newQuery);
+  };
 
-    const dialogOpen = () => {
-        setOpen(true);
-    }
-    const dialogClose = () => setOpen(false);
+  const dialogOpen = () => setOpen(true);
+  const dialogClose = () => setOpen(false);
 
-    return (
-        <div className="search">
-            <button onClick={dialogOpen}> 
-                <StaticImage
-                    src="../images/magnify.svg"
-                    alt="search icon"
-                    className="search-icon"
-                    width={28}
-                /></button>
-            <Dialog open={open} onClose={dialogClose} fullWidth>
-                <DialogTitle>
-                    <IconButton
-                        aria-label="close"
-                        onClick={dialogClose}
-                        sx={{
-                            position: 'absolute',
-                            right: 8,
-                            top: 8,
-                            color: (theme) => theme.palette.grey[500],
-                        }}
-                        >
-                        &#x2715;
-                    </IconButton>
-                    <Autocomplete
-                        options={options}
-                        getOptionLabel={o => o[0]}
-                        onInputChange={(_e, value) => {setQuery(value)}}
-                        onChange={goToSearch}
-                        sx = {{
-                            marginTop: 6
-                        }}
-                        renderInput={(params) =>
-                            <TextField
-                                {...params}
-                                label="Search"
-                                autoFocus
-                            />
-                        }
-                    />
-                </DialogTitle>
-                <DialogContent>
-                    <SearchResults searchTerm={query}/>
-                </DialogContent>
-            </Dialog>
-        </div>
-    )
-}
+  return (
+    <div className="search">
+      <button onClick={dialogOpen}>
+        <StaticImage src="../images/search.svg" alt="search icon" width={50} />
+      </button>
+      <Dialog
+        open={open}
+        onClose={dialogClose}
+        fullWidth
+        PaperProps={{
+          style: {
+            height: "50%",
+            borderRadius: "15px",
+          },
+        }}
+      >
+        <DialogTitle>
+          <IconButton
+            aria-label="close"
+            onClick={dialogClose}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.grey[500],
+            }}
+          >
+            &#x2715;
+          </IconButton>
+          <Autocomplete
+            freeSolo
+            options={query ? [`${QUERY_PREFIX} ${query}`, ...titles] : titles}
+            onInputChange={handleInputChange}
+            inputValue={query}
+            blurOnSelect="touch"
+            sx={{ marginTop: 6 }}
+            renderInput={(params) => (
+              <TextField {...params} label="Search" autoFocus />
+            )}
+            renderOption={(props, option, { selected }) => {
+              const isCustomQuery = option.startsWith(QUERY_PREFIX);
+              return (
+                <StyledOption
+                  {...props}
+                  selected={selected}
+                  isCustomQuery={isCustomQuery}
+                >
+                  {option}
+                </StyledOption>
+              );
+            }}
+          />
+        </DialogTitle>
+        <DialogContent>
+          <SearchResults searchTerm={query} />
+        </DialogContent>
+      </Dialog>
+    </div>
+  );
+};
 
-export default SearchBox
-
+export default SearchBox;

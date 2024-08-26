@@ -1,0 +1,49 @@
+header {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  /* background: radial-gradient(
+    89.51% 50.16% at 50.03% 34.86%,
+    #b4ecd8 0%,
+    #f3f3f3 100%
+  ); */
+}
+
+.header-about {
+  height: auto;
+  min-height: 80vh;
+  background: radial-gradient(
+    89.51% 50.16% at 50.03% 34.86%,
+    #b4ecd8 0%,
+    #f3f3f3 100%
+  );
+}
+
+.header-background {
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    89.51% 50.16% at 50.03% 34.86%,
+    #b4ecd8 0%,
+    #f3f3f3 100%
+  );
+}
+
+.collapsed {
+  height: 10vh;
+  min-height: 117px; /* This is the height of the small logo + 10px */
+  background: radial-gradient(
+    89.51% 50.16% at 50.03% 34.86%,
+    #b4ecd8 0%,
+    #f3f3f3 100%
+  );
+}
+
+header .logo-expanded {
+  top: 1rem;
+  /* left: 2rem; */
+  position: relative;
+}

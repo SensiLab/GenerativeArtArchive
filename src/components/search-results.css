@@ -1,0 +1,9 @@
+.search-result-container {
+  padding-left: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.search-result-container:hover {
+  background-color: rgba(211, 211, 211, 0.5);
+}

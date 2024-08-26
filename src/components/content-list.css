@@ -41,7 +41,7 @@
   box-sizing: border-box;
 }
 
-.entries li h3{
+.entries li h3 {
   color: initial;
   margin: 0;
 }
@@ -51,7 +51,8 @@
   min-height: 40px;
 }
 
-.img-placeholder, .thumbnail {
+.img-placeholder,
+.thumbnail {
   width: 200px;
   height: 200px;
   display: block;
