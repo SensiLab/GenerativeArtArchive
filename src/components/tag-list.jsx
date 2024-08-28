@@ -1,5 +1,7 @@
 import React from "react";
 
+import * as styles from "./tag-list.module.css";
+
 const TagList = ({ tags, currentTag, callback }) => {
   const formatTag = (tag) => {
     // Replace hyphens with spaces and trim
@@ -7,7 +9,7 @@ const TagList = ({ tags, currentTag, callback }) => {
   };
 
   return (
-    <div style={{ display: "flex", gap: "5px" }}>
+    <div className={styles.container}>
       {tags && tags.length > 0 ? (
         tags.map((tag, index) => (
           <p key={index}>
@@ -15,9 +17,8 @@ const TagList = ({ tags, currentTag, callback }) => {
               onClick={() => {
                 callback(tag);
               }}
+              className={styles.tag}
               style={{
-                textTransform: "capitalize",
-                cursor: "pointer",
                 textDecoration: tag === currentTag ? "underline" : "",
               }}
             >

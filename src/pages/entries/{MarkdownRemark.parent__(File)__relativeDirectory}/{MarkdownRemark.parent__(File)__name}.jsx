@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../../../components/layout";
 import Sidebar from "../../../components/sidebar";
 
+import { useCategory } from "../../../contexts/CategoryContext";
 import { useTag } from "../../../contexts/TagContext";
 
+import * as styles from "./entry.module.css";
+
 function Entry({ data }) {
-  const { allTags, currentTag, handleTagChange } = useTag();
+  const { currentCategory } = useCategory();
+  const { tagObject, allTags, setAllTags, currentTag, handleTagChange } =
+    useTag();
   const [sidebarIsOpen, setSidebarIsOpen] = useState(true);
 
   const toggleSidebar = () => {
@@ -19,55 +24,36 @@ function Entry({ data }) {
     handleTagChange(tag);
   };
 
+  // Set tags based on entries in current category
+  useEffect(() => {
+    if (tagObject) {
+      const tagArray = tagObject[currentCategory];
+      setAllTags(tagArray);
+      handleTagChange(tagArray[0]);
+    }
+  }, []);
+
   return (
     <Layout tags={allTags} currentTag={currentTag} tagCallback={tagCallback}>
-      <div
-        style={{
-          display: "flex",
-          paddingTop: "15px",
-          borderTop: "3px solid lightgrey",
-        }}
-      >
+      <div className={styles.entryContainer}>
         {/* Sidebar - Start */}
-        <div
-          style={{
-            display: "flex",
-          }}
-        >
+        <div className={styles.sidebarContainer}>
           {sidebarIsOpen ? (
             <>
               <Sidebar type={data.markdownRemark.frontmatter.type} />
-              <button
-                style={{
-                  display: "flex",
-                  alignItems: "flex-start",
-                  border: "none",
-                  width: "20px",
-                  paddingTop: "500px",
-                }}
-                onClick={toggleSidebar}
-              >
+              <button className={styles.sidebarButton} onClick={toggleSidebar}>
                 &lt;
               </button>
             </>
           ) : (
-            <button
-              style={{
-                display: "flex",
-                alignItems: "flex-start",
-                border: "none",
-                width: "20px",
-                paddingTop: "500px",
-              }}
-              onClick={toggleSidebar}
-            >
+            <button className={styles.sidebarButton} onClick={toggleSidebar}>
               &gt;
             </button>
           )}
         </div>
         {/* Sidebar - End */}
         <div
-          style={{ padding: "0 100px" }}
+          className={styles.entryContent}
           dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
         />
       </div>

@@ -5,7 +5,14 @@ import SearchResult from "./search-result";
 
 import { CATEGORY_TO_LABEL_MAP } from "../constants/categories";
 
-const SearchResultsByCategory = ({ category, results }) => {
+import * as styles from "./search-results-by-category.module.css";
+
+const SearchResultsByCategory = ({
+  category,
+  results,
+  dialogClose,
+  setQuery,
+}) => {
   const data = useStaticQuery(graphql`
     query {
       allFile(filter: { relativePath: { regex: "/search-icon-/" } }) {
@@ -30,7 +37,7 @@ const SearchResultsByCategory = ({ category, results }) => {
 
   return (
     <>
-      <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+      <div className={styles.categoryContainer}>
         {iconUrl && (
           <img src={iconUrl} alt={`${category} icon`} width={12} height={12} />
         )}
@@ -38,7 +45,12 @@ const SearchResultsByCategory = ({ category, results }) => {
       </div>
       <div>
         {results.map((result) => (
-          <SearchResult key={result.title} result={result} />
+          <SearchResult
+            key={result.title}
+            result={result}
+            dialogClose={dialogClose}
+            setQuery={setQuery}
+          />
         ))}
       </div>
     </>

@@ -6,7 +6,7 @@ import { CATEGORIES_TO_FILTER_MAP } from "../constants/categories";
 
 import { useTag } from "../contexts/TagContext";
 
-import "./sidebar.css";
+import * as styles from "./sidebar.module.css";
 
 const Sidebar = ({ type }) => {
   const entries = useEntriesData();
@@ -39,17 +39,7 @@ const Sidebar = ({ type }) => {
   }, [currentTag]);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "15px",
-        maxHeight: "100vh",
-        overflowY: "auto",
-        paddingRight: "20px",
-      }}
-      className="scroller"
-    >
+    <div className={styles.scroller}>
       {entriesFilteredByTag.map((node) => {
         return <EntryPreviewMini key={node.title} node={node} />;
       })}

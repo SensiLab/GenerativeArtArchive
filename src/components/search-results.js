@@ -6,7 +6,7 @@ import SearchResultsByCategory from "./search-results-by-category";
 
 import { CATEGORIES } from "../constants/categories";
 
-const SearchResults = ({ searchTerm }) => {
+const SearchResults = ({ searchTerm, dialogClose, setQuery }) => {
   const searchData = useStaticQuery(
     graphql`
       {
@@ -23,8 +23,8 @@ const SearchResults = ({ searchTerm }) => {
 
   const [resultsByCategory, setResultsByCategory] = useState({
     [CATEGORIES.concept]: [],
-    [CATEGORIES.example]: [],
     [CATEGORIES.algorithm]: [],
+    [CATEGORIES.example]: [],
     [CATEGORIES.artwork]: [],
   });
 
@@ -32,8 +32,8 @@ const SearchResults = ({ searchTerm }) => {
     // Filter results into their respective categories
     const resultsByCategoryTemp = {
       [CATEGORIES.concept]: [],
-      [CATEGORIES.example]: [],
       [CATEGORIES.algorithm]: [],
+      [CATEGORIES.example]: [],
       [CATEGORIES.artwork]: [],
     };
 
@@ -56,6 +56,8 @@ const SearchResults = ({ searchTerm }) => {
                 key={key}
                 category={key}
                 results={value}
+                dialogClose={dialogClose}
+                setQuery={setQuery}
               />
             )
           );

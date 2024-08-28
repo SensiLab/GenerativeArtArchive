@@ -10,7 +10,7 @@ import { CATEGORIES, CATEGORIES_TO_FILTER_MAP } from "../constants/categories";
 import { useHome } from "../contexts/HomeContext";
 import { useCategory } from "../contexts/CategoryContext";
 
-import "./footer.css";
+import * as styles from "./footer.module.css";
 
 const Footer = () => {
   const { setIsExpanded } = useHome();
@@ -35,15 +35,8 @@ const Footer = () => {
   return (
     <footer>
       <div className="full-inner">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-          }}
-        >
-          <div style={{ display: "flex", flexDirection: "row", gap: "200px" }}>
+        <div className={styles.footerContainer}>
+          <div className={styles.footerLeft}>
             <ul className="footer-links">
               {Object.entries(CATEGORIES).map(([key, value]) => (
                 <li key={key}>
@@ -63,12 +56,7 @@ const Footer = () => {
               <li>
                 <button
                   onClick={contributeOpen}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    padding: "0",
-                    cursor: "pointer",
-                  }}
+                  className={styles.footerButton}
                 >
                   <p>Contribute</p>
                 </button>
@@ -86,15 +74,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <button
-                  onClick={contactOpen}
-                  style={{
-                    background: "none",
-                    border: "none",
-                    padding: "0",
-                    cursor: "pointer",
-                  }}
-                >
+                <button onClick={contactOpen} className={styles.footerButton}>
                   <p>Contact Us</p>
                 </button>
                 <ContactModal
@@ -107,11 +87,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div style={{ display: "flex", gap: "100px" }}>
+          <div className={styles.footerRight}>
             <a
               href="https://sensilab.monash.edu"
               target="_blank"
-              style={{ display: "flex", alignItems: "center", gap: "5px" }}
+              className={styles.footerLogo}
             >
               <StaticImage
                 src="../images/sensilab-logo.svg"

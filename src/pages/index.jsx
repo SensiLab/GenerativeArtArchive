@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
-import "../components/global.css";
-import "../components/index.css";
+import "./global.css";
+import "./index.css";
 import "../components/content-list.css";
 import { useEntriesData } from "../entry-queries";
 
 import Layout from "../components/layout";
-
 import EntryPreview from "../components/entry-preview";
 
 import { CATEGORIES, CATEGORIES_TO_FILTER_MAP } from "../constants/categories";
@@ -17,7 +16,8 @@ import { useTag } from "../contexts/TagContext";
 const HomePage = ({}) => {
   const { currentCategory } = useCategory();
   const [randomEntry, setRandomEntry] = useState(null);
-  const { allTags, setAllTags, currentTag, handleTagChange } = useTag();
+  const { tagObject, allTags, setAllTags, currentTag, handleTagChange } =
+    useTag();
   const entries = useEntriesData();
   const entriesFilteredByCategory =
     entries[CATEGORIES_TO_FILTER_MAP[currentCategory]];
@@ -43,24 +43,12 @@ const HomePage = ({}) => {
 
   // Set tags based on entries in current category
   useEffect(() => {
-    const tags = new Set();
-    tags.add("all");
-
-    entriesFilteredByCategory.nodes.forEach((entry) => {
-      if (entry.frontmatter.tags) {
-        entry.frontmatter.tags.split(",").forEach((tag) => {
-          if (tag.length > 0) {
-            tags.add(tag.trim());
-          }
-        });
-      }
-    });
-
-    const tagArray = Array.from(tags);
-
-    setAllTags(tagArray);
-    handleTagChange(tagArray[0]);
-  }, [entriesFilteredByCategory]);
+    if (tagObject) {
+      const tagArray = tagObject[currentCategory];
+      setAllTags(tagArray);
+      handleTagChange(tagArray[0]);
+    }
+  }, [currentCategory, tagObject]);
 
   useEffect(() => {
     if (currentTag === "all") {
@@ -93,8 +81,7 @@ const HomePage = ({}) => {
           currentTag={currentTag}
           tagCallback={tagCallback}
         >
-          {/* Children of Layout here is a list of entry previews */}
-          <div style={{ display: "flex", flexDirection: "column" }}>
+          <div id="entry-list-container">
             {entriesFilteredByTag.map((node) => (
               <EntryPreview key={node.frontmatter.title} node={node} />
             ))}

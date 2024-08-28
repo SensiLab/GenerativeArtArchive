@@ -71,41 +71,25 @@ const ContentMenu = ({}) => {
       style={isActive(key) ? { backgroundColor: "white" } : {}}
     >
       <div
+        className="button-icon"
         style={{
           backgroundColor: CATEGORY_TO_COLOR_MAP[key],
-          width: "22px",
-          height: "25px",
-          border: "1px solid black",
-          borderRadius: "10px",
         }}
       ></div>
       <div>
-        <h1 className="category-button-text" style={{ margin: "0px" }}>
-          {CATEGORY_TO_LABEL_MAP[key]}
-        </h1>
+        <h1 className="category-button-text">{CATEGORY_TO_LABEL_MAP[key]}</h1>
       </div>
     </div>
   ));
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        backgroundColor: "#f3f3f3",
-      }}
-    >
-      <div
-        className="button-container"
-        style={{ display: "flex", gap: "20px" }}
-      >
-        {categoryDivs}
-      </div>
+    <div className="menu-container">
+      <div className="button-container">{categoryDivs}</div>
       <div className="menu-filler"></div>
       <div className="button" onClick={dialogOpen}>
         <h1
           className="category-button-text"
-          style={{ margin: "0px", cursor: "pointer", zIndex: 1 }}
+          style={{ cursor: "pointer", zIndex: 1 }}
         >
           CONTRIBUTE
         </h1>

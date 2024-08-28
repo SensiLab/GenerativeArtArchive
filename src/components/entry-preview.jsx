@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
+import * as styles from "./entry-preview.module.css";
+
 const EntryPreview = ({ node }) => {
   const { slug, frontmatter } = node;
   const { title, description, tags, thumbnail } = frontmatter;
@@ -22,30 +24,10 @@ const EntryPreview = ({ node }) => {
   }, []);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        gap: "20px",
-      }}
-    >
+    <div className={styles.previewContainer}>
       {/* Left Section (Text) */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          width: "50%",
-          borderTop: "3px solid lightgrey",
-          paddingTop: "10px",
-          paddingBottom: "10px",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            flex: 1,
-          }}
-        >
+      <div className={styles.previewLeft}>
+        <div className={styles.icon}>
           <div>
             <StaticImage
               src="../images/entry-preview-icon.svg"
@@ -55,63 +37,20 @@ const EntryPreview = ({ node }) => {
             />
           </div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            flex: 6,
-            gap: "10px",
-            paddingRight: "40px",
-          }}
-        >
+        <div className={styles.textContainer}>
           <div>
-            <Link to={slug} style={{ textDecoration: "none", color: "black" }}>
-              <h1 style={{ margin: 0, lineHeight: 1 }}>
-                {title.toUpperCase()}
-              </h1>
+            <Link to={slug} className={styles.titleLink}>
+              <h1 className={styles.titleText}>{title.toUpperCase()}</h1>
             </Link>
           </div>
-          <div
-            style={{
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              display: "-webkit-box",
-              WebkitLineClamp: 4,
-              WebkitBoxOrient: "vertical",
-              lineHeight: "1.2em",
-              maxHeight: "4.8em",
-            }}
-          >
-            {description}
-          </div>
+          <div className={styles.descriptionContainer}>{description}</div>
         </div>
-        <div
-          style={{
-            display: "flex",
-            flex: 2,
-          }}
-        >
-          <div
-            style={{
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              display: "-webkit-box",
-              WebkitLineClamp: 6,
-              WebkitBoxOrient: "vertical",
-              lineHeight: "1.2em",
-              maxHeight: "7.2em",
-            }}
-          >
+        <div className={styles.tagsContainer}>
+          <div className={styles.tagsInner}>
             {allTags &&
               allTags.length > 0 &&
               allTags.map((tag, index) => (
-                <i
-                  key={index}
-                  style={{
-                    textTransform: "capitalize",
-                  }}
-                >
+                <i key={index} className={styles.tag}>
                   {tag}
                   {index < allTags.length - 1 && ", "}
                 </i>
@@ -121,40 +60,14 @@ const EntryPreview = ({ node }) => {
       </div>
 
       {/* Right Section (Image) */}
-      <div style={{ width: "50%" }}>
-        {
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              width: "100%",
-              height: "145px",
-              overflow: "hidden",
-            }}
-          >
-            {thumbnail && (
-              <Link
-                to={slug}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  height: "100%",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  style={{
-                    width: "100%",
-                    height: "90%",
-                    objectFit: "cover",
-                  }}
-                  src={thumbnail.publicURL}
-                />
-              </Link>
-            )}
-          </div>
-        }
+      <div className={styles.previewRight}>
+        <div className={styles.imageContainer}>
+          {thumbnail && (
+            <Link to={slug} className={styles.imageLink}>
+              <img className={styles.image} src={thumbnail.publicURL} />
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

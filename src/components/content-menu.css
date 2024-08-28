@@ -1,5 +1,19 @@
+.button-icon {
+  width: 22px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 .category-button-text {
   font-size: 2em;
+  margin: 0px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3f3;
 }
 
 .button {
@@ -43,6 +57,8 @@
 
 .button-container {
   position: relative;
+  display: flex;
+  gap: 20px;
 }
 
 .button-container::before {
@@ -64,4 +80,15 @@
   width: 100%;
   top: 50%;
   border-top: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0px;
+  }
 }

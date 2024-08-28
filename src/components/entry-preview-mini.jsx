@@ -1,28 +1,15 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import * as styles from "./entry-preview-mini.module.css";
+
 const EntryPreviewMini = ({ node }) => {
   const { title, thumbnailURL, slug } = node;
 
   return (
-    <div
-      style={{
-        width: "100px",
-        paddingBottom: "10px",
-        borderBottom: "3px solid lightgrey",
-      }}
-    >
-      <Link
-        to={slug}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "10px",
-          textDecoration: "none",
-          color: "black",
-        }}
-      >
-        <img src={thumbnailURL} style={{ width: "100px", height: "100px" }} />
+    <div className={styles.previewContainer}>
+      <Link to={slug} className={styles.previewLink}>
+        <img src={thumbnailURL} className={styles.previewImg} />
         {title.toUpperCase()}
       </Link>
     </div>

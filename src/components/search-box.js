@@ -110,7 +110,11 @@ const SearchBox = () => {
           />
         </DialogTitle>
         <DialogContent>
-          <SearchResults searchTerm={query} />
+          <SearchResults
+            searchTerm={query}
+            dialogClose={dialogClose}
+            setQuery={setQuery}
+          />
         </DialogContent>
       </Dialog>
     </div>

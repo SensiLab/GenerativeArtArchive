@@ -1,8 +1,10 @@
 import React from "react";
 
+import * as styles from "./category-description.module.css";
+
 const CategoryDescription = () => {
   return (
-    <div style={{ borderBottom: "1px solid black" }}>
+    <div className={styles.container}>
       <p>
         CATEGORY DESCRIPTION. A DESCRIPTION OF THE CURRENTLY SELECTED CATEGORY.
       </p>

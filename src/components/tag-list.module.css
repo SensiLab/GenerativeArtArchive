@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  gap: 5px;
+}
+
+.tag {
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: none;
+  }
+}

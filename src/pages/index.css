@@ -164,6 +164,11 @@ code {
   display: block;
 }
 
+#entry-list-container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media screen and (max-width: 1200px) {
   section,
   .full-inner {
@@ -173,5 +178,11 @@ code {
 
   header.full-inner {
     padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .featured-description > p {
+    display: none;
   }
 }

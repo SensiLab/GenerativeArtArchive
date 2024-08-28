@@ -1,3 +1,12 @@
+.scroller {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding-right: 20px;
+}
+
 .scroller::-webkit-scrollbar {
   width: 1em;
 }

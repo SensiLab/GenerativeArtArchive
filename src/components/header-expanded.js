@@ -10,24 +10,18 @@ import { CATEGORIES } from "../constants/categories";
 
 import { useCategory } from "../contexts/CategoryContext";
 
-import "./header-expanded.css";
+import "./header.css";
+import * as styles from "./header-expanded.module.css";
 
 const HeaderExpanded = () => {
   const { handleCategoryChange } = useCategory();
 
   return (
     <header className="full-inner">
-      <div className="header-background">
+      <div className={styles.headerBackground}>
         <P5Sketch />
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          // alignItems: "center",
-        }}
-      >
+      <div className={styles.headerContainer}>
         <Link
           to={`/?category=${CATEGORIES.concept}`}
           onClick={() => {
@@ -42,7 +36,7 @@ const HeaderExpanded = () => {
             width={378}
           />
         </Link>
-        <div style={{ display: "flex", gap: "10px", paddingTop: "1em" }}>
+        <div className={styles.buttonsContainer}>
           <SearchBox />
           <InfoButton />
         </div>

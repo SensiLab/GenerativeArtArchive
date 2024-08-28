@@ -9,7 +9,8 @@ import { CATEGORIES } from "../constants/categories";
 
 import { useCategory } from "../contexts/CategoryContext";
 
-import "./header-expanded.css";
+import "./header.css";
+import * as styles from "./header-about.module.css";
 
 const TEAM_BIOS = [
   {
@@ -30,13 +31,7 @@ const HeaderAbout = () => {
       className="full-inner header-about"
       style={{ display: "flex", flexDirection: "column" }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-        }}
-      >
+      <div className={styles.headerContainer}>
         <Link
           to={`/?category=${CATEGORIES.concept}`}
           onClick={() => {
@@ -51,42 +46,21 @@ const HeaderAbout = () => {
             width={378}
           />
         </Link>
-        <div style={{ display: "flex", gap: "10px", paddingTop: "1em" }}>
+        <div className={styles.buttonsContainer}>
           <SearchBox />
           <InfoButton />
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          marginTop: "40px",
-          marginBottom: "40px",
-          gap: "20px",
-          flexGrow: 1,
-          borderBottom: "2px dashed grey",
-        }}
-      >
-        <div
-          style={{
-            borderTop: "2px solid grey",
-            borderBottom: "2px solid grey",
-          }}
-        >
+      <div className={styles.contentContainer}>
+        <div className={styles.description}>
           <h2>
             LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. VESTIBULUM
             TURPIS URNA, COMMODO AC RHONCUS UT, PORTTITOR NON LEO.
           </h2>
         </div>
-        <div style={{ display: "flex" }}>
-          <div style={{ flex: 1, paddingRight: "40px" }}>
-            <div
-              style={{
-                borderTop: "2px solid grey",
-                borderBottom: "2px solid grey",
-                padding: "5px 0",
-              }}
-            >
+        <div className={styles.contentInner}>
+          <div className={styles.contentSection}>
+            <div className={styles.content}>
               <h1>ABOUT US</h1>
             </div>
             <p>
@@ -109,15 +83,9 @@ const HeaderAbout = () => {
               generative systems in a collegial manner.
             </p>
           </div>
-          <div style={{ flex: 1, paddingRight: "40px" }}>
+          <div className={styles.contentSection}>
             <div>
-              <div
-                style={{
-                  borderTop: "2px solid grey",
-                  borderBottom: "2px solid grey",
-                  padding: "5px 0",
-                }}
-              >
+              <div className={styles.content}>
                 <h1>THE TEAM</h1>
               </div>
               <div>
@@ -133,15 +101,9 @@ const HeaderAbout = () => {
               </div>
             </div>
           </div>
-          <div style={{ flex: 1 }}>
+          <div className={styles.contentSectionLast}>
             <div>
-              <div
-                style={{
-                  borderTop: "2px solid grey",
-                  borderBottom: "2px solid grey",
-                  padding: "5px 0",
-                }}
-              >
+              <div className={styles.content}>
                 <h1>COPYRIGHT</h1>
               </div>
               <p>

@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import "./search-results.css";
+import { useCategory } from "../contexts/CategoryContext";
 
-const SearchResult = ({ result }) => {
-  const { slug, title, tags } = result;
+import * as styles from "./search-result.module.css";
+
+const SearchResult = ({ result, dialogClose, setQuery }) => {
+  const { slug, title, tags, type } = result;
+  const { handleCategoryChange } = useCategory();
 
   const label = title.toUpperCase();
   const tagList = tags
@@ -18,36 +21,16 @@ const SearchResult = ({ result }) => {
   return (
     <Link
       to={slug}
-      style={{
-        textDecoration: "none",
-        color: "black",
+      className={styles.link}
+      onClick={() => {
+        handleCategoryChange(type);
+        dialogClose();
+        setQuery("");
       }}
     >
-      <div
-        className="search-result-container"
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <p
-          style={{
-            fontSize: "1.5em",
-            fontWeight: "lighter",
-            margin: "5px 0 5px 0",
-          }}
-        >
-          {label}
-        </p>
-        {tagList.length > 0 && (
-          <p
-            style={{
-              fontSize: "0.9em",
-              fontWeight: "lighter",
-              margin: "0",
-              paddingBottom: "5px",
-            }}
-          >
-            {tagList}
-          </p>
-        )}
+      <div className={styles.searchResultInner}>
+        <p className={styles.title}>{label}</p>
+        {tagList.length > 0 && <p className={styles.tags}>{tagList}</p>}
       </div>
     </Link>
   );

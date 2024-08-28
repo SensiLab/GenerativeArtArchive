@@ -11,6 +11,8 @@ import FeaturedArticle from "./featured-article";
 
 import { useHome } from "../contexts/HomeContext";
 
+import * as styles from "./layout.module.css";
+
 const Layout = ({
   header: CustomHeader,
   featuredArticle,
@@ -40,12 +42,7 @@ const Layout = ({
             <FeaturedArticle article={featuredArticle} />
           )}
           <Menu />
-          <div
-            style={{
-              padding: "0px 15px 10px 15px",
-              border: "1px solid black",
-            }}
-          >
+          <div className={styles.entryList}>
             <CategoryDescription />
             <TagList
               tags={tags}
