@@ -69,6 +69,7 @@ const Footer = () => {
                 <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSfSNfY9h0NlUTB0w1sUEarDJ0GXLRS_6c0exh4ud7W9jouvBQ/viewform?emailAddress="
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Sign Up For Mailing List
                 </a>
@@ -91,6 +92,7 @@ const Footer = () => {
             <a
               href="https://sensilab.monash.edu"
               target="_blank"
+              rel="noreferrer"
               className={styles.footerLogo}
             >
               <StaticImage

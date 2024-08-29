@@ -9,7 +9,7 @@ const EntryPreviewMini = ({ node }) => {
   return (
     <div className={styles.previewContainer}>
       <Link to={slug} className={styles.previewLink}>
-        <img src={thumbnailURL} className={styles.previewImg} />
+        <img src={thumbnailURL} className={styles.previewImg} alt={title} />
         {title.toUpperCase()}
       </Link>
     </div>

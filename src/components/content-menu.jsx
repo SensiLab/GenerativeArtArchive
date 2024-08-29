@@ -15,7 +15,7 @@ import {
   CATEGORY_TO_LABEL_MAP,
 } from "../constants/categories";
 
-const ContentMenu = ({}) => {
+const ContentMenu = () => {
   const { setIsExpanded } = useHome();
   const { currentCategory, handleCategoryChange } = useCategory();
   const location = useLocation();
@@ -34,7 +34,7 @@ const ContentMenu = ({}) => {
     window.addEventListener("popstate", updateCategory);
 
     return () => window.removeEventListener("popstate", updateCategory);
-  }, []);
+  }, [currentCategory, handleCategoryChange]);
 
   const handleCategoryClick = (category) => {
     if (!isHomePage) {

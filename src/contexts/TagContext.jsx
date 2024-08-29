@@ -40,7 +40,7 @@ export const TagProvider = ({ children }) => {
     });
 
     setTagObject(tempTagObject);
-  }, []);
+  }, [entries]);
 
   return (
     <TagContext.Provider

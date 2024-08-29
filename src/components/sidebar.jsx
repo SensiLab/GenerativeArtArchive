@@ -36,7 +36,7 @@ const Sidebar = ({ type }) => {
       });
       setEntriesFilteredByTag(filteredEntries);
     }
-  }, [currentTag]);
+  }, [currentTag, entriesFilteredByCategory]);
 
   return (
     <div className={styles.scroller}>

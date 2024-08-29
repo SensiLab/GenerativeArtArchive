@@ -13,7 +13,7 @@ import { CATEGORIES, CATEGORIES_TO_FILTER_MAP } from "../constants/categories";
 import { useCategory } from "../contexts/CategoryContext";
 import { useTag } from "../contexts/TagContext";
 
-const HomePage = ({}) => {
+const HomePage = () => {
   const { currentCategory } = useCategory();
   const [randomEntry, setRandomEntry] = useState(null);
   const { tagObject, allTags, setAllTags, currentTag, handleTagChange } =
@@ -39,7 +39,7 @@ const HomePage = ({}) => {
     });
     const randomEntry = getRandomElement(entriesFromRandomCategory);
     setRandomEntry(randomEntry);
-  }, []);
+  }, [entries]);
 
   // Set tags based on entries in current category
   useEffect(() => {

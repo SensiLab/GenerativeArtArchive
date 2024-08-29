@@ -21,7 +21,7 @@ const EntryPreview = ({ node }) => {
       const tagArray = Array.from(tagSet);
       setAllTags(tagArray);
     }
-  }, []);
+  }, [tags]);
 
   return (
     <div className={styles.previewContainer}>
@@ -64,7 +64,11 @@ const EntryPreview = ({ node }) => {
         <div className={styles.imageContainer}>
           {thumbnail && (
             <Link to={slug} className={styles.imageLink}>
-              <img className={styles.image} src={thumbnail.publicURL} />
+              <img
+                className={styles.image}
+                src={thumbnail.publicURL}
+                alt={title}
+              />
             </Link>
           )}
         </div>
