@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
-import SearchBox from "../components/search-box";
-import InfoButton from "../components/info-button";
+import SearchBox from "./search-box";
+import InfoButton from "./info-button";
 
 import { CATEGORIES } from "../constants/categories";
 

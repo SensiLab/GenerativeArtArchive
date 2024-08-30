@@ -8,6 +8,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import IconButton from "@mui/material/IconButton";
 import { styled } from "@mui/system";
+
 import SearchResults from "./search-results";
 import "./search-box.css";
 
