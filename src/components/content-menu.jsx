@@ -23,17 +23,7 @@ const ContentMenu = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const updateCategory = () => {
-      const category =
-        new URLSearchParams(window.location.search).get("category") ||
-        currentCategory;
-      handleCategoryChange(category);
-    };
-
-    updateCategory(); // Initial update
-    window.addEventListener("popstate", updateCategory);
-
-    return () => window.removeEventListener("popstate", updateCategory);
+    handleCategoryChange(currentCategory);
   }, [currentCategory, handleCategoryChange]);
 
   const handleCategoryClick = (category) => {
