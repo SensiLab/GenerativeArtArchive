@@ -30,9 +30,21 @@ const ContributeModal = ({ open, dialogClose }) => {
           &#x2715;
         </IconButton>
       </DialogTitle>
-      {/* TODO: Content for making contributions */}
       <DialogContent>
         <h1>Contribute to the Archive</h1>
+        <p>
+          Have some content you'd like to add to the archive? Head on over to
+          our{" "}
+          <a
+            href="https://github.com/SensiLab/GenerativeArtArchive?tab=readme-ov-file#how-to-contribute"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            GitHub repository
+          </a>{" "}
+          where you'll find contribution instructions.
+        </p>
       </DialogContent>
     </Dialog>
   );
