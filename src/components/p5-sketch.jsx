@@ -1,13 +1,24 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
 
-import { sketch } from "../sketches/game-of-life";
+// import { sketch } from "../sketches/game-of-life";
+// import { sketch } from "../sketches/l-system";
+// import { sketch } from "../sketches/flocking";
+import { sketch } from "../sketches/differential-growth";
 
 const P5Sketch = () => {
   const containerRef = useRef(null);
   const [dimensions, setDimensions] = useState(null);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Set isClient to true after the component has mounted
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
     const updateDimensions = () => {
       if (containerRef.current) {
         setDimensions({
@@ -31,7 +42,7 @@ const P5Sketch = () => {
         resizeObserver.unobserve(containerRef.current);
       }
     };
-  }, []);
+  }, [isClient]);
 
   return (
     <div
@@ -39,7 +50,7 @@ const P5Sketch = () => {
       ref={containerRef}
       style={{ width: "100%", height: "100%" }}
     >
-      {dimensions && (
+      {isClient && dimensions && (
         <ReactP5Wrapper
           sketch={sketch}
           parentWidth={dimensions.width}

@@ -23,19 +23,21 @@ const Layout = ({
 }) => {
   const location = useLocation();
   const { isExpanded } = useHome();
-  const isHomePage = location.pathname === "/";
+  const isHomePage =
+    location.pathname === `${__PATH_PREFIX__}/` || location.pathname === "/";
   const isSecondaryPage =
-    location.pathname === "/about/" || location.pathname === "/contact/";
+    location.pathname === `${__PATH_PREFIX__}/about/` ||
+    location.pathname === `${__PATH_PREFIX__}/contact/`;
+
+  const renderHeader = () => {
+    if (CustomHeader) return <CustomHeader />;
+    if (isHomePage && isExpanded) return <HeaderExpanded />;
+    return <Header />;
+  };
 
   return (
     <div>
-      {CustomHeader ? (
-        <CustomHeader />
-      ) : isHomePage && isExpanded ? (
-        <HeaderExpanded />
-      ) : (
-        <Header />
-      )}
+      {renderHeader()}
       {!isSecondaryPage && (
         <>
           {isHomePage && isExpanded && featuredArticle && (

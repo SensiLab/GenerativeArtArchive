@@ -3,6 +3,7 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Generative Art Archive",
   },
+  pathPrefix: "/GenerativeArtArchive",
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",

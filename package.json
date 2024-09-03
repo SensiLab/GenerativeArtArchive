@@ -10,7 +10,8 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
@@ -40,6 +41,7 @@
     "gatsby-plugin-sharp": "^5.13.1",
     "gatsby-remark-images": "^7.13.1",
     "gatsby-remark-responsive-iframe": "^6.13.1",
-    "gatsby-transformer-remark": "^6.13.1"
+    "gatsby-transformer-remark": "^6.13.1",
+    "gh-pages": "^6.1.1"
   }
 }

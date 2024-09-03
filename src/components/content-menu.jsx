@@ -19,7 +19,8 @@ const ContentMenu = () => {
   const { setIsExpanded } = useHome();
   const { currentCategory, handleCategoryChange } = useCategory();
   const location = useLocation();
-  const isHomePage = location.pathname === "/";
+  const isHomePage =
+    location.pathname === `${__PATH_PREFIX__}/` || location.pathname === "/";
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -32,10 +33,12 @@ const ContentMenu = () => {
       handleCategoryChange(category);
       setIsExpanded(false);
     } else {
-      const url = new URL(window.location.href);
-      url.searchParams.set("category", category);
-      window.history.pushState({}, "", url);
-      handleCategoryChange(category);
+      if (typeof window !== "undefined") {
+        const url = new URL(window.location.href);
+        url.searchParams.set("category", category);
+        window.history.pushState({}, "", url);
+        handleCategoryChange(category);
+      }
     }
   };
 
