@@ -10,7 +10,7 @@ import { useTag } from "../../../contexts/TagContext";
 import * as styles from "./entry.module.css";
 
 function Entry({ data }) {
-  const { currentCategory } = useCategory();
+  const { currentCategory, handleCategoryChange } = useCategory();
   const { tagObject, allTags, setAllTags, currentTag, handleTagChange } =
     useTag();
   const [sidebarIsOpen, setSidebarIsOpen] = useState(true);
@@ -24,6 +24,12 @@ function Entry({ data }) {
     handleTagChange(tag);
   };
 
+  useEffect(() => {
+    if (data.markdownRemark.frontmatter.type !== currentCategory) {
+      handleCategoryChange(data.markdownRemark.frontmatter.type);
+    }
+  }, []);
+
   // Set tags based on entries in current category
   useEffect(() => {
     if (tagObject) {
@@ -31,33 +37,47 @@ function Entry({ data }) {
       setAllTags(tagArray);
       handleTagChange(tagArray[0]);
     }
-  }, []);
+  }, [currentCategory]);
 
   return (
-    <Layout tags={allTags} currentTag={currentTag} tagCallback={tagCallback}>
-      <div className={styles.entryContainer}>
-        {/* Sidebar - Start */}
-        <div className={styles.sidebarContainer}>
-          {sidebarIsOpen ? (
-            <>
-              <Sidebar type={data.markdownRemark.frontmatter.type} />
-              <button className={styles.sidebarButton} onClick={toggleSidebar}>
-                &lt;
-              </button>
-            </>
-          ) : (
-            <button className={styles.sidebarButton} onClick={toggleSidebar}>
-              &gt;
-            </button>
-          )}
-        </div>
-        {/* Sidebar - End */}
-        <div
-          className={styles.entryContent}
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        />
-      </div>
-    </Layout>
+    <>
+      {tagObject && allTags && (
+        <Layout
+          tags={allTags}
+          currentTag={currentTag}
+          tagCallback={tagCallback}
+        >
+          <div className={styles.entryContainer}>
+            {/* Sidebar - Start */}
+            <div className={styles.sidebarContainer}>
+              {sidebarIsOpen ? (
+                <>
+                  <Sidebar type={data.markdownRemark.frontmatter.type} />
+                  <button
+                    className={styles.sidebarButton}
+                    onClick={toggleSidebar}
+                  >
+                    &lt;
+                  </button>
+                </>
+              ) : (
+                <button
+                  className={styles.sidebarButton}
+                  onClick={toggleSidebar}
+                >
+                  &gt;
+                </button>
+              )}
+            </div>
+            {/* Sidebar - End */}
+            <div
+              className={styles.entryContent}
+              dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+            />
+          </div>
+        </Layout>
+      )}
+    </>
   );
 }
 

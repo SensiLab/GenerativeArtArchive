@@ -10,8 +10,15 @@ const RefreshRedirect = ({ children }) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       const isRefreshing = sessionStorage.getItem("isRefreshing");
-      if (isRefreshing === "true") {
+
+      // Use the performance API to check if it's a reload
+      const navigationEntries = performance.getEntriesByType("navigation");
+      const isReload =
+        navigationEntries.length > 0 && navigationEntries[0].type === "reload";
+
+      if (isReload && isRefreshing === "true") {
         sessionStorage.removeItem("isRefreshing");
+        // Only redirect if it was a refresh
         navigate("/");
       }
 

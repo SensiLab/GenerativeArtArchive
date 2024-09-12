@@ -10,20 +10,21 @@ import * as styles from "./sidebar.module.css";
 
 const Sidebar = ({ type }) => {
   const entries = useEntriesData();
-  const entriesFilteredByCategory = entries[
-    CATEGORIES_TO_FILTER_MAP[type]
-  ].nodes.map((node) => ({
-    title: node.frontmatter.title,
-    thumbnailURL: node.frontmatter.thumbnail
-      ? node.frontmatter.thumbnail.publicURL
-      : null,
-    slug: node.slug,
-    tags: node.frontmatter.tags,
-  }));
   const [entriesFilteredByTag, setEntriesFilteredByTag] = useState([]);
   const { currentTag } = useTag();
 
   useEffect(() => {
+    const entriesFilteredByCategory = entries[
+      CATEGORIES_TO_FILTER_MAP[type]
+    ].nodes.map((node) => ({
+      title: node.frontmatter.title,
+      thumbnailURL: node.frontmatter.thumbnail
+        ? node.frontmatter.thumbnail.publicURL
+        : null,
+      slug: node.slug,
+      tags: node.frontmatter.tags,
+    }));
+
     if (currentTag === "all") {
       setEntriesFilteredByTag(entriesFilteredByCategory);
     } else {
@@ -36,7 +37,7 @@ const Sidebar = ({ type }) => {
       });
       setEntriesFilteredByTag(filteredEntries);
     }
-  }, [currentTag, entriesFilteredByCategory]);
+  }, [currentTag, entries, type]);
 
   return (
     <div className={styles.scroller}>

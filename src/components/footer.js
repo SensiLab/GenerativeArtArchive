@@ -41,7 +41,7 @@ const Footer = () => {
               {Object.entries(CATEGORIES).map(([key, value]) => (
                 <li key={key}>
                   <Link
-                    to={`/?category=${value}`}
+                    to={"/"}
                     onClick={() => {
                       handleCategoryChange(value);
                       setIsExpanded(true);

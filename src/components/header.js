@@ -8,11 +8,13 @@ import InfoButton from "./info-button";
 import { useHome } from "../contexts/HomeContext";
 import { useCategory } from "../contexts/CategoryContext";
 
+import { CATEGORIES } from "../constants/categories";
+
 import "./header.css";
 
 const Header = () => {
   const { setIsExpanded } = useHome();
-  const { currentCategory } = useCategory();
+  const { handleCategoryChange } = useCategory();
 
   return (
     <header className="full-inner collapsed">
@@ -24,8 +26,9 @@ const Header = () => {
         }}
       >
         <Link
-          to={`/?category=${currentCategory}`}
+          to={"/"}
           onClick={() => {
+            handleCategoryChange(CATEGORIES.concept);
             setIsExpanded(true);
           }}
         >

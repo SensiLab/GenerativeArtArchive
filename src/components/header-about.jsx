@@ -33,7 +33,7 @@ const HeaderAbout = () => {
     >
       <div className={styles.headerContainer}>
         <Link
-          to={`/?category=${CATEGORIES.concept}`}
+          to={"/"}
           onClick={() => {
             handleCategoryChange(CATEGORIES.concept);
           }}

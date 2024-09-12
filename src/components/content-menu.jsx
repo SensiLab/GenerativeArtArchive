@@ -29,14 +29,11 @@ const ContentMenu = () => {
 
   const handleCategoryClick = (category) => {
     if (!isHomePage) {
-      navigate(`/?category=${category}`);
+      navigate("/");
       handleCategoryChange(category);
       setIsExpanded(false);
     } else {
       if (typeof window !== "undefined") {
-        const url = new URL(window.location.href);
-        url.searchParams.set("category", category);
-        window.history.pushState({}, "", url);
         handleCategoryChange(category);
       }
     }
