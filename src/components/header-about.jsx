@@ -54,8 +54,9 @@ const HeaderAbout = () => {
       <div className={styles.contentContainer}>
         <div className={styles.description}>
           <h2>
-            LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISCING ELIT. VESTIBULUM
-            TURPIS URNA, COMMODO AC RHONCUS UT, PORTTITOR NON LEO.
+            WE ARE A TEAM OF STORY TELLERS, ARTISTS, MAKERS, HACKERS, DESIGNERS,
+            DEVELOPERS, MUSICIANS, CODERS, SCIENTISTS, THEORISTS, LUTHIERS AND
+            BUILDERS.
           </h2>
         </div>
         <div className={styles.contentInner}>
@@ -92,7 +93,9 @@ const HeaderAbout = () => {
                 {TEAM_BIOS.map((bio) => (
                   <>
                     <p style={{ whiteSpace: "pre-line" }}>
-                      <strong style={{ fontWeight: 700 }}>{bio.name}</strong>
+                      <strong style={{ fontWeight: 700, fontSize: "larger" }}>
+                        {bio.name}
+                      </strong>
                       <br />
                       {bio.bio}
                     </p>

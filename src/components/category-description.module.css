@@ -2,6 +2,10 @@
   border-bottom: 1px solid black;
 }
 
+.text {
+  font-size: medium;
+}
+
 @media screen and (max-width: 767px) {
   .container {
     border-bottom: none;

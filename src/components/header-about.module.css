@@ -40,6 +40,11 @@
   padding: 5px 0;
 }
 
+.contentSection p,
+.contentSectionLast p {
+  font-size: medium;
+}
+
 .description {
   border-top: 2px solid grey;
   border-bottom: 2px solid grey;

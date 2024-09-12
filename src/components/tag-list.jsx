@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import * as styles from "./tag-list.module.css";
 
@@ -8,8 +8,13 @@ const TagList = ({ tags, currentTag, callback }) => {
     return tag.replace(/-/g, " ").trim();
   };
 
+  useEffect(() => {
+    const tagContainer = document.getElementById("tagContainer");
+    tagContainer.scrollLeft = 0;
+  }, [tags]);
+
   return (
-    <div className={styles.container}>
+    <div id="tagContainer" className={styles.container}>
       {tags && tags.length > 0 ? (
         tags.map((tag, index) => (
           <p key={index}>
