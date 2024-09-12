@@ -1,0 +1,22 @@
+.entryContainer {
+  display: flex;
+  padding-top: 15px;
+  border-top: 3px solid lightgrey;
+}
+
+.sidebarContainer {
+  display: flex;
+}
+
+.sidebarButton {
+  display: flex;
+  align-items: flex-start;
+  border: none;
+  width: 20px;
+  padding-top: 500px;
+  cursor: pointer;
+}
+
+.entryContent {
+  padding: 0 100px;
+}

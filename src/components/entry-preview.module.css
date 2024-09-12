@@ -1,0 +1,105 @@
+.previewContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.previewLeft {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  border-top: 3px solid lightgrey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.previewRight {
+  width: 50%;
+}
+
+.icon {
+  display: flex;
+  flex: 1;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 6;
+  gap: 10px;
+  padding-right: 40px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex: 2;
+}
+
+.tagsInner {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  -webkit-box-orient: vertical;
+  line-height: 1.2em;
+  max-height: 7.2em;
+}
+
+.tag {
+  text-transform: capitalize;
+}
+
+.titleLink {
+  text-decoration: none;
+  color: black;
+}
+
+.titleText {
+  margin: 0;
+  line-height: 1;
+}
+
+.descriptionContainer {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-break: 4;
+  line-break: 4;
+  -webkit-box-orient: vertical;
+  line-height: 1.2em;
+  max-height: 4.8em;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+}
+
+.imageLink {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 767px) {
+  .icon {
+    display: none;
+  }
+
+  .tagsContainer {
+    display: none;
+  }
+}

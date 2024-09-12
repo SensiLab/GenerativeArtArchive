@@ -1,0 +1,94 @@
+.button-icon {
+  width: 22px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.category-button-text {
+  font-size: 2em;
+  margin: 0px;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f3f3;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 5px 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: VT323;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+.button::before {
+  box-sizing: border-box;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.button-selected::before {
+  height: 102%;
+  border-bottom: 1px solid white;
+}
+
+.button-container {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.button-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  border-top: 1px solid black;
+}
+
+.menu-filler {
+  position: relative;
+  width: 100%;
+}
+
+.menu-filler::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  border-top: 1px solid black;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    flex-direction: column;
+  }
+
+  .button-container {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
