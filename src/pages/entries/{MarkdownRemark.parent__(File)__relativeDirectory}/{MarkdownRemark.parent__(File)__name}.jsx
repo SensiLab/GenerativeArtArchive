@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { graphql } from "gatsby";
+import "katex/dist/katex.min.css";
+import "prismjs/themes/prism.css";
 
 import Layout from "../../../components/layout";
 import Sidebar from "../../../components/sidebar";
@@ -37,7 +39,7 @@ function Entry({ data }) {
       setAllTags(tagArray);
       handleTagChange(tagArray[0]);
     }
-  }, [currentCategory]);
+  }, [currentCategory, tagObject]);
 
   return (
     <>
