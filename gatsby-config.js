@@ -9,18 +9,44 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-plugin-catch-links",
     {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [`gatsby-remark-responsive-iframe`],
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "entries",
         path: "./entries",
       },
-      __key: "entries",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
+              strict: `ignore`,
+            },
+          },
+          "gatsby-remark-prismjs",
+          `gatsby-remark-responsive-iframe`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              wrapperStyle:
+                "margin-left: 0!important; margin-right: 0!important;",
+              linkImagesToOriginal: false,
+            },
+          },
+          "gatsby-remark-gifs",
+        ],
+      },
     },
     {
       resolve: `gatsby-omni-font-loader`,
@@ -42,32 +68,8 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-image`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    "gatsby-plugin-image",
     "gatsby-plugin-sharp",
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-              wrapperStyle:
-                "margin-left: 0!important; margin-right: 0!important;",
-              linkImagesToOriginal: false,
-            },
-          },
-          "gatsby-remark-gifs",
-        ],
-      },
-    },
     {
       resolve: "gatsby-plugin-local-search",
       options: {
