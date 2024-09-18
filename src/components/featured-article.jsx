@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 import { useCategory } from "../contexts/CategoryContext";
 
@@ -16,15 +17,15 @@ const FeaturedArticle = ({ article }) => {
         </div>
         <div className="featured-description">
           <p>{description}</p>
-          <a
+          <Link
+            to={slug}
             className="start-reading"
-            href={slug}
             onClick={() => {
               handleCategoryChange(type);
             }}
           >
             Start reading
-          </a>
+          </Link>
         </div>
       </div>
     </section>
