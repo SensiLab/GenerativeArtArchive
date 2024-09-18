@@ -3,33 +3,35 @@ title: Noise
 
 type: concept
 
-description:
+description: Noise is used to create smooth randomness, which feels more natural and coherent than pure randomness. Noise introduces subtle variations, often by smoothing random sequences or adding disturbances to smooth ones. Perlin Noise is a key example, commonly used to generate organic textures and terrains that resemble the natural variations found in the real world.
 
 author: Camilo Cruz
 
 rights: Public Domain (CC0)
 
-thumbnail: ./imgs/perlin-noise_thumbnail.png
+thumbnail: ./imgs/noise.png
+
+tags: artist-friendly, randomness, random-walk, noise
 ---
 
 # Noise
 
-In this article we explore the concept of _noise_, particularly in relationship to computer graphics.
+In generative art and computer graphics, noise plays a crucial role in creating more natural and visually appealing randomness.
 
-- randomness is a go-to technique for sampling in computational modelling and simulation.
-- randomness is also used to generate variation in procedural generation of computer graphics.
-- often, the variation produced by using plain randomness is perceived as unnatural, as patterns/features are difficult to extract from randomness (think TV static)
-- Noise is used in computer graphics to produce _smooth randomness_. This is, randomness with local coherence.
+While pure randomness is often used in computational modeling and simulations to introduce variation, it can produce results that feel chaotic and unnatural, such as the static seen on a TV screen. To address this, noise is introduced as a form of "smooth randomness," which maintains local coherence and allows for the extraction of discernible patterns. This smooth randomness is achieved either by smoothing a random sequence or by adding disturbances to an otherwise smooth sequence. The most notable example of this approach is Perlin Noise, widely used in computer graphics to generate organic textures, terrains, and other procedural elements that require a more natural variation.
+
+By using noise, artists and developers can create complex, yet coherent visuals that mimic the subtle variations found in nature.
 
 ## How is noise generated?
 
-Generally speaking, the generation of noise can be approached in one of two ways: smoothing a random sequence, or introducing disturbance into a smooth sequence. The most notable example of noise is Perlin Noise
+Generally speaking, the generation of noise can be approached in one of two ways: smoothing a random sequence, or introducing disturbance into a smooth sequence. A notable example of noise used in computer graphics is Perlin noise.
 
-## Applied example(s)
+## Examples
 
-## Definition
+This example shows a 1-dimensional random sequence (red line) contrasted with smooth randomness (blue line):
 
-Randomness
+![Smooth noise vs random noise](imgs/smooth-noise.png)
 
-## References
-(Check noise folder)
+This cloudlike texture was created using 2-dimensional Perlin noise:
+
+![Perlin noise](imgs/perlin-noise-cropped.png)

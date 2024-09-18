@@ -1,34 +1,37 @@
 ---
-
 title: Mapping and Representation
 
 type: concept
 
-description: An overview of how numbers become artistic production
+description: Mapping and data representation are key processes in creative coding that transform raw computational data into artistic expressions. While computers excel at generating data through algorithms, creativity lies in how this data is mapped into formal outputs, such as visuals, sound, or spatial forms.
 
 creator: Generative Repository Team
 
 rights: Public Domain (CC0)
 
-keywords: 
+thumbnail: ./imgs/mapping.png
 
-thumbnail: 
-
-related_concepts: 
-
-related_examples:
-
-related_algorithms:
-
-related_artwork:
-
+tags: data, complex-systems, complexity, artist-friendly
 ---
 
 # Mapping and Representation
 
-- This entry should aim to illustrate the role of mapping and representation ideas and processes in generative work.
-- There are two aspects to generative methods used for creative applications:
-  - Data that drives the output. This is where all the algorithms and examples showcased in this repository come into play. Mathematical operations and functions that return numbers. This is what computers are really good at!
-  - Mapping of the data to a formal output. This is where the creative aspect of generative methods lies. A stream of generated data points can drive different formal interpretations, from topology to geometry, to sound, only to name a few.
+In creative coding, mapping and data representation are fundamental processes that bridge the gap between raw computational outputs and their artistic expressions. At the heart of generative work lies data — often the result of complex algorithms and mathematical functions — that serves as the driving force behind the creative work.
 
-## Some examples
+Computers excel at producing streams of data, whether through noise functions, random number generation, or more sophisticated models. However, creativity in generative art often emerges in the mapping process, where this data is translated into formal outputs. This transformation is where the artist's vision comes to life, as numerical values are reinterpreted into visual forms, spatial structures, auditory experiences, or other sensory outputs.
+
+The same set of data can yield vastly different results depending on how it's mapped, whether it’s used to shape a digital landscape, generate abstract geometries, or compose a piece of music. Thus, mapping is not merely a technical step but a creative act, where the interpretation of data becomes a medium of artistic expression, unlocking new possibilities for exploring form, texture, and pattern in digital art.
+
+## Examples
+
+In this example, numbers are mapped to the size and colour of each circle:
+
+![Coloured circles](imgs/mapping-cropped.png)
+
+Here we map, say, temperature data to shapes and colours:
+
+![Temperature map](imgs/temperature-map.png)
+
+Or in a more abstract sense:
+
+![Temperature map abstract](imgs/temperature-map-2.png)

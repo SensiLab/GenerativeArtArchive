@@ -3,7 +3,7 @@ title: L-Systems
 
 type: algorithm
 
-description: Parallel re-writing systems commonly used to recreate organic structures.
+description: L-systems are used to create natural-looking patterns like trees and plants. Starting with a simple string of symbols and repeatedly applying rules to grow more complex shapes, they are inspired by how plants grow.
 
 creator: Aristide Lindenmayer
 
@@ -11,14 +11,14 @@ author: Camilo Cruz Gambardella
 
 rights: Public Domain (CC0)
 
-keywords: shape grammar, fractals, complexity
+tags: complex-systems, shape-grammar, complexity, artist-friendly, map-generation, fractals, self-similarity
 
-thumbnail:
+thumbnail: imgs/l-system.png
 ---
 
 # L-Systems
 
-L-systems systems, are a type of formal grammar that generate fractal patterns and shapes through parallel re-writing and recursion. They were invented by Hungarian theoretical biologist, Aristid Lindenmayer, in 1968 as a way to model the growth of plants and the development of organisms [1](#1). L-systems can generate a variety of complex patterns and shapes, including fractals, which is why they are widely used in computer graphics, generative art, and algorithmic design. The recursive nature of L-systems allows for infinite variations and customizations, making them a versatile tool for creative exploration.
+L-systems are a type of formal grammar that generate fractal patterns and shapes through parallel re-writing and recursion. They were invented by Hungarian theoretical biologist, Aristid Lindenmayer, in 1968 as a way to model the growth of plants and the development of organisms [1](#1). L-systems can generate a variety of complex patterns and shapes, including fractals, which is why they are widely used in computer graphics, generative art, and algorithmic design. The recursive nature of L-systems allows for infinite variations and customizations, making them a versatile tool for creative exploration.
 
 ## How they work
 
