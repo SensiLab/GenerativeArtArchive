@@ -1,9 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ReactP5Wrapper } from "@p5-wrapper/react";
-
-// import { sketch } from "../sketches/game-of-life";
-// import { sketch } from "../sketches/l-system";
-// import { sketch } from "../sketches/flocking";
 import { sketch } from "../sketches/differential-growth";
 
 const P5Sketch = () => {
