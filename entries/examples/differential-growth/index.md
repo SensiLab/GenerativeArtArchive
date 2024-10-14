@@ -1,10 +1,9 @@
 ---
-
 title: Differential Growth
 
 type: example
 
-description: 
+description: Differential growth algorithms simulate the way objects expand at different rates, creating organic, branching structures. In generative art, they are used to produce intricate, evolving forms that mimic natural growth patterns.
 
 code: Cristian Rojas Cardenas
 
@@ -12,9 +11,9 @@ author: Camilo Cruz Gambardella
 
 rights: Public Domain (CC0)
 
-thumbnail: imgs/dla_thumb.png
+thumbnail: imgs/dg_thumb.png
 
-tags: physics simulation, complexity, agent-based, steering-behaviours
+tags: physics-simulation, complexity, agent-based, steering-behaviours, complex-systems
 ---
 
 # Differential Growth
@@ -46,11 +45,13 @@ You can play around with the parameters on the right hand side.
 
 There are many examples of generative art that use differential-growth algorithms, ranging from simple 2D patterns to complex 3D sculptures. Some artists use color or texture to add further complexity and visual interest to the generated structures. Here are a few examples:
 
-<!-- - "Differential Growth" by Raven Kwok: A series of abstract 3D sculptures that combine smooth curves and sharp angles to create intricate structures.
-- "Living Segments" by Memo Akten: A 2D pattern that simulates the growth and branching of plant cells, with each segment responding to its neighbors and the environment. -->
+- "Differential Growth" by Raven Kwok: A series of abstract 3D sculptures that combine smooth curves and sharp angles to create intricate structures.
+- "Living Segments" by Memo Akten: A 2D pattern that simulates the growth and branching of plant cells, with each segment responding to its neighbors and the environment.
+
 - ["Xylem and Hyphae"](https://n-e-r-v-o-u-s.com/projects/sets/networks/) by N-e-r-v-o-u-s System: A series of 3D sculptures and installations inspired by the rhizomatic patterns found in fungi and coral.
 
 ## References
 
-<a name="1"></a>1. Huang, C. __et al__ (2018) Differential growth and shape formation in plant organs. Proceedings of the National Academy of Sciences 115(49)  [(accessed here)](https://www.pnas.org/doi/10.1073/pnas.1811296115)
+<a name="1"></a>1. Huang, C. **et al** (2018) Differential growth and shape formation in plant organs. Proceedings of the National Academy of Sciences 115(49) [(accessed here)](https://www.pnas.org/doi/10.1073/pnas.1811296115)
+
 <a name="2"></a>2. Hoff, A. On Generative Algorithms - Differential Line [(accessed here)](https://inconvergent.net/generative/differential-line/)

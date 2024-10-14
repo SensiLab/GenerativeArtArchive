@@ -3,7 +3,7 @@ title: Chaikin Curves
 
 type: example
 
-description:
+description: Chaikin curves are a method of smoothing sharp edges into gentle curves. This technique is often used in generative art to create soft, flowing shapes from angular lines.
 
 code: Camilo Cruz Gambardella
 
@@ -11,9 +11,9 @@ creator: Camilo Cruz Gambardella
 
 rights: Public Domain (CC0)
 
-thumbnail: 
+thumbnail: imgs/chaikin.png
 
-tags: curves, line drawing
+tags: curves, line-drawing, artist-friendly, contours
 ---
 
 # Chaikin Curves
@@ -42,7 +42,7 @@ Chaikin curves are a versatile tool for generative artists and can be used to cr
 
 - "Recreating the Noise Orbit" (tutorial) by Stevan Dedovic.
 - "Chaikin" by Pedro Cacique is a live implementation of a Chaikin Curve framed like a picture.
-  
+
 Chaikin curves can be combined with other algorithms to create even more complex and visually striking shapes and patterns. By adjusting the parameters of the algorithm and experimenting with different combinations, generative artists can create truly unique and captivating pieces of art.
 
 ## References

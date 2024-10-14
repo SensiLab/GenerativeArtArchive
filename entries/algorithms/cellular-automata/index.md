@@ -1,5 +1,4 @@
 ---
-
 title: Cellular Automata
 
 type: algorithm
@@ -10,12 +9,9 @@ creator: Stanislaw Ulam and John von Neumann
 
 rights: Public Domain (CC0)
 
-keywords: complexity, self-replication
-
 thumbnail: imgs/ca-shell.jpeg
 
-tags: dynamic systems, complex systems, 
-
+tags: dynamic-systems, complex-systems, complexity, physics-simulation, cellular-automata
 ---
 
 # Cellular Automata
@@ -26,4 +22,4 @@ Cellular Automata (CA) are discrete models of computation developed originally i
 
 ## How they work
 
-A cellular automaton is a dynamic system that consists of a regular grid of cells, where each cell can be in one of a finite number of states at any given time. The state of each cell is updated in discrete time increments, 
+A cellular automaton is a dynamic system that consists of a regular grid of cells, where each cell can be in one of a finite number of states at any given time. The state of each cell is updated in discrete time increments,

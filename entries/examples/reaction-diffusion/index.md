@@ -1,10 +1,9 @@
 ---
-
 title: Reaction Diffusion
 
 type: example
 
-description: 
+description: Reaction-diffusion algorithms simulate chemical reactions spreading over a surface, creating intricate, organic patterns. These algorithms are often used to produce textures resembling natural forms like animal skins or coral.
 
 code: Cristian Rojas Cardenas
 
@@ -12,14 +11,12 @@ author: Camilo Cruz Gambardella
 
 rights: Public Domain (CC0)
 
-keywords: physics simulation, complexity, cellular automata
+tags: physics-simulation, complexity, cellular-automata
 
 thumbnail: ./imgs/rd_thumb.png
-
 ---
 
 # Reaction Diffusion
-
 
 Reaction-diffusion simulations are a class of mathematical models used to simulate complex system, such as the interactions between chemical components that react to each other and move in space via diffusion [1](#1), among others found in nature. One of the most intriguing applications of reaction-diffusion simulations is in generative art, where they can be used to create stunning visual representations of natural patterns and processes.
 
@@ -33,7 +30,7 @@ For the implementation of a computational simulation of a reaction-diffusion sys
 - Defining the reaction rules, including the rate at which the activator and inhibitor react with each other.
 - Setting up diffusion rules, including the rate at which the activator and inhibitor diffuse through the system.
 - Using a grid or mesh to represent the system and its boundaries.
-Using numerical methods to solve the equations that describe the behavior of the system over time.
+  Using numerical methods to solve the equations that describe the behavior of the system over time.
 
 ## A live example
 

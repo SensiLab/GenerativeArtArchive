@@ -1,0 +1,57 @@
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 10px;
+  padding-top: 1em;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  gap: 20px;
+  flex-grow: 1;
+  border-bottom: 2px dashed grey;
+  min-height: inherit;
+}
+
+.contentInner {
+  display: flex;
+}
+
+.contentSection {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.contentSectionLast {
+  flex: 1;
+}
+
+.content {
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+  padding: 5px 0;
+}
+
+.contentSection p,
+.contentSectionLast p {
+  font-size: medium;
+}
+
+.description {
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
+
+@media screen and (max-width: 767px) {
+  .contentInner {
+    flex-direction: column;
+  }
+}

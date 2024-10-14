@@ -3,15 +3,15 @@ title: Bezier Curves
 
 type: example
 
-description:
+description: Bezier curves are smooth, flexible lines defined by mathematical points. They are often used in generative art to create flowing shapes and elegant designs.
 
 creator: Camilo Cruz Gambardella
 
 rights: Public Domain (CC0)
 
-thumbnail:
+thumbnail: imgs/bezier.png
 
-tags: curves, line drawing
+tags: curves, line-drawing, artist-friendly, contours
 ---
 
 # Bezier Curves
@@ -20,10 +20,8 @@ Introduced by engineer Pierre Bezier in 1960, as a tool for automotive design, a
 
 ## How they work
 
-For the example presented below, we have chosen the 'simple' way of constructing Bezier curves: linear interpolations ('lerps'). In essence, what *lerps* do is find values between two other values. For instance, a 3 step *lerp* between 0 and 3 should find the values at 33% and 66% of the way between the two values. This will return the series [0, 1, 2, 3], where 0 and 3 are the endpoints and 1 and 2 are the interpolation values.
-To construct a Bezier curve we do recursive *lerps* between control points. So, if we have 2 control points – a linear Bezier – the curve is defined by the series of points between them, which returns a straight line. With three control points – quadratic Bezier – we first connect the series of interpolation points between  o picking a point between two other points.
-
-
+For the example presented below, we have chosen the 'simple' way of constructing Bezier curves: linear interpolations ('lerps'). In essence, what _lerps_ do is find values between two other values. For instance, a 3 step _lerp_ between 0 and 3 should find the values at 33% and 66% of the way between the two values. This will return the series [0, 1, 2, 3], where 0 and 3 are the endpoints and 1 and 2 are the interpolation values.
+To construct a Bezier curve we do recursive _lerps_ between control points. So, if we have 2 control points – a linear Bezier – the curve is defined by the series of points between them, which returns a straight line. With three control points – quadratic Bezier – we first connect the series of interpolation points between o picking a point between two other points.
 
 ## A live example
 

@@ -3,7 +3,7 @@ title: Worley Noise
 
 type: example
 
-description: 
+description: Worley noise, also known as cellular noise, is a type of algorithm used in generative art to create organic, cell-like patterns.
 
 creator: Camilo Cruz Gambardella
 
@@ -11,19 +11,20 @@ rights: Public Domain (CC0)
 
 thumbnail: imgs/wn1.png
 
-tags: noise, 
+tags: noise, artist-friendly
 ---
 
 # Worley Noise
 
 ![Four examples of Worley noise](./imgs/wn1.png)
 
-Introduced by Steven Worley in 1996 [1], as a method to create natural-looking procedural textures in computer graphics, Worley noise uses an approach similar to the Voronoi diagram, where randomly distributed seed points – feature points – define areas in 2D or 3D space, which in turn define the colour information for every other point in that space. This produces textures that resemble stone, water, crystals and other microscopic cellular structures.
+Introduced by Steven Worley in 1996 [1] as a method to create natural-looking procedural textures in computer graphics, Worley noise uses an approach similar to the Voronoi diagram, where randomly distributed seed points – feature points – define areas in 2D or 3D space, which in turn define the colour information for every other point in that space. This produces textures that resemble stone, water, crystals and other microscopic cellular structures.
 
 ## How it works
 
+The Worley noise algorithm generates patterns by focusing on how far a point in space is from its closest "feature point," which is randomly placed. The algorithm divides the space into cells, each containing a random point, and calculates the distance from any given location to the nearest point in the surrounding cells. These distances can then be visualized as a series of smooth transitions or abrupt boundaries, depending on how the data is used.
 
-
+This approach is particularly useful for generating textures that mimic natural forms, like the irregular patterns of cracked earth, veins in marble, or the organic structures found in plants and animal skins. Worley noise is often used in 3D modeling, procedural generation, and abstract generative art because of its ability to create complex and organic-looking visuals with simple rules.
 
 ## A live example
 

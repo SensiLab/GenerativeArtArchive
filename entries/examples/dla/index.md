@@ -1,10 +1,9 @@
 ---
-
 title: Diffusion-limited Aggregation
 
 type: example
 
-description: 
+description: Diffusion Limited Aggregation (DLA) is a natural growth process that forms branching patterns. It's commonly seen in nature, such as in the growth of snowflakes, crystals, and even coral. The algorithm simulates how particles cluster together over time.
 
 code: Cristian Rojas Cardenas
 
@@ -14,8 +13,7 @@ rights: Public Domain (CC0)
 
 thumbnail: imgs/dla_thumb.png
 
-tags: random walk, agent-based, self-similarity, fractals
-
+tags: random-walk, agent-based, self-similarity, fractals
 ---
 
 # Diffusion-limited Aggregation
@@ -28,7 +26,7 @@ Diffusion-limited aggregation (DLA) is a process of fractal pattern formation in
 
 ## How it works
 
-At its simplest, a DLA simulation begins by populating a two-dimensional “space” with a set of randomly distributed particles. One of the particles is labelled as the *seed*, and is made stationary. The rest of the particles then diffuses –moves randomly through the space. When a particle encounters the seed, it as well becomes stationary, forming a cluster. The process is then repeated, whereby newly formed clusters serve as seed for the remaining moving particles.
+At its simplest, a DLA simulation begins by populating a two-dimensional “space” with a set of randomly distributed particles. One of the particles is labelled as the _seed_, and is made stationary. The rest of the particles then diffuses –moves randomly through the space. When a particle encounters the seed, it as well becomes stationary, forming a cluster. The process is then repeated, whereby newly formed clusters serve as seed for the remaining moving particles.
 
 ## A live example
 
@@ -36,9 +34,8 @@ At its simplest, a DLA simulation begins by populating a two-dimensional “spac
 
 ## Related entries
 
-
 ## References
 
-1. <a name="1">[Witten Jr, T. A., & Sander, L. M. (1981). *Diffusion-limited aggregation, a kinetic critical phenomenon*. Physical review letters, 47(19), 1400.](http://ancient.hydro.nsc.ru/MPP_Specourse/witten81.pdf)</a>
+1. <a name="1">[Witten Jr, T. A., & Sander, L. M. (1981). _Diffusion-limited aggregation, a kinetic critical phenomenon_. Physical review letters, 47(19), 1400.](http://ancient.hydro.nsc.ru/MPP_Specourse/witten81.pdf)</a>
 
 2. <a name="2">[Bourke, P. (2004) DLA - Diffusion Limited Aggregation](http://paulbourke.net/fractals/dla/)</a>

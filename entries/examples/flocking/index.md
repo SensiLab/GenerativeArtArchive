@@ -3,7 +3,7 @@ title: Flocking
 
 type: example
 
-description: An agent-based simulation of bird-like flocking behaviours.
+description: Flocking algorithms simulate the collective movement of groups, like birds in flight or fish in a school. They are used to create dynamic, lifelike patterns and behaviors.
 
 creator: Craig Reynolds
 
@@ -11,9 +11,9 @@ author: Cristian Rojas Cardenas
 
 rights: Public Domain (CC0)
 
-keywords: cellular-automata, complexity
+tags: cellular-automata, complexity, flocking
 
-thumbnail: ./imgs/flocking_thumbnail.png
+thumbnail: ./imgs/flocking.png
 ---
 
 # Flocking
@@ -29,14 +29,18 @@ The flocking algorithm is a behaviour model that has been used in computer graph
 The flocking algorithm is based on three simple rules that each boid, – the represntation of a bird – in the flock follows to achieve a coordinated movement. These rules include:
 
 ### Alignment:
+
 Each boid tends to steer towards the average heading of its neighbors.
+
 ### Cohesion:
+
 Each boid tends to steer towards the average position of its neighbors.
+
 ### Separation:
+
 Each boid tends to steer away from its neighbors to avoid collisions.
 
 By following these rules, the flock of boids can achieve a coordinated movement that mimics the movement of natural flocks.
-
 
 ## A live example
 
